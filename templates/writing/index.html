@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block style %}
+<style>
+    .stats {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+
+    #text-input {
+        width: 100%;
+        min-height: 150px;
+        padding: 1rem;
+        font-size: 1rem;
+        font-family: monospace;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        resize: vertical;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        margin-bottom: 1rem;
+        background-color: #fff;
+    }
+
+    #style-select {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: #0077ff;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+        background-color: #005fcc;
+    }
+
+    .output img {
+        max-width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .status {
+        font-size: 0.95rem;
+        margin-top: 1rem;
+    }
+
+    .error {
+        color: red;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="stats">
+        <p>👁️ Visitors: {{ visitors }}</p>
+        <p>✍️ Users who generated handwriting: {{ generators }}</p>
+    </div>
+
+    <h1>🖋️ Handwriting Generator</h1>
+
+    <textarea id="text-input" placeholder="Enter text to convert..."></textarea>
+    <br>
+
+    <label for="style-select">Style:</label>
+    <select id="style-select">
+        {% for i in style_range %}
+            <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+    </select>
+    <br>
+
+    <button onclick="generate()">Generate</button>
+
+    <div class="output" id="output"></div>
+{% endblock %}
+
+{% block script %}
+<script>
+    function generate() {
+        const text = document.getElementById("text-input").value.trim();
+        const style = document.getElementById("style-select").value;
+        const output = document.getElementById("output");
+        output.innerHTML = `<p class="status">⏳ Generating...</p>`;
+
+        fetch("/generate/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "X-CSRFToken": getCSRFToken(),
+            },
+            body: new URLSearchParams({
+                text: text,
+                style: style
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.error) {
+                output.innerHTML = `<p class="error">❌ ${data.error}</p>`;
+                return;
+            }
+
+            output.innerHTML = `<p class="status">✅ Generated ${data.pages_generated} page(s) in ${data.generation_time}s</p>`;
+            data.files.forEach(file => {
+                const img = document.createElement("img");
+                img.src = file + "?v=" + Date.now();
+                img.alt = "Generated SVG";
+                output.appendChild(img);
+            });
+        })
+        .catch(err => {
+            output.innerHTML = `<p class="error">❌ ${err.message}</p>`;
+        });
+    }
+
+    function getCSRFToken() {
+        const name = "csrftoken";
+        const cookies = document.cookie.split(";").map(c => c.trim());
+        for (let cookie of cookies) {
+            if (cookie.startsWith(name + "=")) {
+                return decodeURIComponent(cookie.split("=")[1]);
+            }
+        }
+        return "";
+    }
+</script>
+{% endblock %}
