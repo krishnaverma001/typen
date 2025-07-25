@@ -1,0 +1,31 @@
+<!--signup.html-->
+
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<h2>Sign Up</h2>
+<form method="post" action="{% url 'signup' %}" style="max-width: 400px;">
+    {% csrf_token %}
+
+    {% if form.errors %}
+        <p class="error">Please fix the errors below.</p>
+    {% endif %}
+
+    <label for="id_username">Username</label><br>
+    <input type="text" name="username" id="id_username" value="{{ form.username.value|default:'' }}" required
+           style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+
+    <label for="id_email">Email</label><br>
+    <input type="email" name="email" id="id_email" value="{{ form.email.value|default:'' }}"
+           style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+
+    <label for="id_password">Password</label><br>
+    <input type="password" name="password" id="id_password" required
+           style="width: 100%; padding: 0.5rem; margin-bottom: 1.5rem;"><br>
+
+    <button type="submit" style="padding: 0.6rem 1.2rem;">Register</button>
+    <p style="margin-top: 1rem;">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</form>
+{% endblock %}
