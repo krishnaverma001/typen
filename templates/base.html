@@ -1,0 +1,187 @@
+<!--base.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Typen{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts (optional, consistent look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #ffffff, #f1f1f1);
+            color: #111;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            margin-right: 1.5rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        header a:last-child {
+            margin-right: 0;
+        }
+
+        .container {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            transition: border 0.2s ease;
+        }
+
+        .avatar:hover {
+            border-color: #0077ff;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 48px;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            display: none;
+            flex-direction: column;
+            min-width: 150px;
+            z-index: 1000;
+        }
+
+        .dropdown-menu.show {
+            display: flex;
+        }
+
+        .dropdown-menu a,
+        .dropdown-menu span {
+            display: block;
+            padding: 0.5rem 0;
+            text-decoration: none;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-menu a:hover {
+            color: #0077ff;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin: 1rem 0;
+        }
+
+        {% block style %}{% endblock %}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="left">
+            <a href="{% url 'home' %}">Typen</a>
+        </div>
+        <div class="right">
+            {% if user.is_authenticated %}
+                <div class="dropdown">
+                    <img src="{% if user.image %}{{ user.image.url }}{% else %}https://ui-avatars.com/api/?name={{ user.username|urlencode }}{% endif %}" alt="Profile picture of {{ user.username }}" class="avatar" onclick="toggleDropdown(event)" aria-expanded="false" aria-haspopup="true" id="userMenuButton" />
+
+                    <div class="dropdown-menu" id="dropdownMenu" aria-labelledby="userMenuButton">
+                        <span>{{ user.username }}</span>
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </div>
+                </div>
+            {% else %}
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'signup' %}">Sign Up</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        © {{ year|default:2025 }} Typen
+    </footer>
+
+    {% block script %}{% endblock %}
+
+    <script>
+        // Define the function in the head to ensure it's available
+        function toggleDropdown(event) {
+            event.stopPropagation();
+            const menu = document.getElementById("dropdownMenu");
+            const button = document.getElementById("userMenuButton");
+
+            if (menu && button) {
+                menu.classList.toggle('show');
+                const isExpanded = menu.classList.contains('show');
+                button.setAttribute('aria-expanded', isExpanded);
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('click', function(event) {
+                const menu = document.getElementById("dropdownMenu");
+                const button = document.getElementById("userMenuButton");
+
+                if (menu && button) {
+                    const isClickInside = menu.contains(event.target) || button.contains(event.target);
+
+                    if (!isClickInside && menu.classList.contains('show')) {
+                        menu.classList.remove('show');
+                        button.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
