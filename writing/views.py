@@ -57,7 +57,7 @@ def generate(request):
                 data = f.read()
 
             # This is the actual path Django will save to
-            relative_path = f"media/user/{request.user.username}/{filename}"
+            relative_path = f"user/{request.user.username}/{filename}"
 
             # Remove the file *before* creating the object
             if default_storage.exists(relative_path):
