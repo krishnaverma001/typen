@@ -9,7 +9,7 @@ from django.db import models
 from django.conf import settings
 
 def user_directory_path(instance, filename):
-    return f'media/user/{instance.user.username}/{filename}'
+    return f'user/{instance.user.username}/{filename}'
 
 class UserImage(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
