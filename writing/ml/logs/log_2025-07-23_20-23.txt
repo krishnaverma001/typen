@@ -1,0 +1,2 @@
+[[07/23/2025 08:24:10 PM]] Internal Server Error: /generate/
+[[07/23/2025 08:26:27 PM]] E:\Projects\handwriting\writing\views.py changed, reloading.

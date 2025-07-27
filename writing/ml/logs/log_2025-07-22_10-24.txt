@@ -1,0 +1,16 @@
+[[07/22/2025 10:24:52 AM]] Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Projects\handwriting\writing\views.py", line 66, in home
+    return render(request, 'index.html')
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+[[07/22/2025 10:26:37 AM]] E:\Projects\handwriting\writing\views.py changed, reloading.

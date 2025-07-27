@@ -1,0 +1,187 @@
+[[07/24/2025 09:51:31 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/24/2025 11:37:21 PM]] Not Found: /favicon.ico
+[[07/24/2025 11:43:46 PM]] Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\Projects\handwriting\writing\views.py", line 100, in home
+    "generators": stats.total_generators,
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 104, in find_template
+    template_name, skip=history,
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 212, in do_block
+    raise TemplateSyntaxError("'%s' tag with name '%s' appears more than once" % (bits[0], block_name))
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'script' appears more than once
+[[07/24/2025 11:43:46 PM]] Not Found: /favicon.ico
+[[07/24/2025 11:44:36 PM]] Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\Projects\handwriting\writing\views.py", line 100, in home
+    "generators": stats.total_generators,
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\defaulttags.py", line 449, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\urls\resolvers.py", line 698, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name.
+[[07/24/2025 11:44:37 PM]] Not Found: /favicon.ico
+[[07/24/2025 11:44:58 PM]] Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\Projects\handwriting\writing\views.py", line 100, in home
+    "generators": stats.total_generators,
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\defaulttags.py", line 449, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\urls\resolvers.py", line 698, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name.
+[[07/24/2025 11:44:59 PM]] Not Found: /favicon.ico
+[[07/24/2025 11:45:00 PM]] Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "E:\Projects\handwriting\writing\views.py", line 100, in home
+    "generators": stats.total_generators,
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\defaulttags.py", line 449, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\urls\resolvers.py", line 698, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name.
+[[07/24/2025 11:45:00 PM]] Not Found: /favicon.ico
+[[07/24/2025 11:47:04 PM]] E:\Projects\handwriting\user\models.py changed, reloading.
