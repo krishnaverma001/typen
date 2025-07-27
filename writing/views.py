@@ -1,12 +1,14 @@
 # writing/views.py
 
 import os
+import io
+import zipfile
 from django.conf import settings
 
 from django.core.files import File
 from django.core.files.base import ContentFile
 from django.core.files.storage import default_storage
-from django.http import JsonResponse
+from django.http import JsonResponse, FileResponse, HttpResponse
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
@@ -23,6 +25,9 @@ def generate(request):
     try:
         text = request.POST.get("text")
         style = int(request.POST.get("style", 0))
+        bias = float(request.POST.get("bias"))
+        stroke_width = float(request.POST.get("stroke_width"))
+        use_margins = request.POST.get("use_margins", "false").lower() == "true"    # Hardcoded margin configuration
 
         if not text:
             return JsonResponse({"error": "No text provided."}, status=400)
@@ -36,9 +41,10 @@ def generate(request):
             output_dir=output_dir,
             font_size_factor=0.9,
             handwriting_style=style,
-            variation_level=0.6,        # Low value: more uniform; High value: more randomness
+            variation_level=bias,        # Low value: more uniform; High value: more randomness
             stroke_color='black',
-            stroke_width=2
+            stroke_width=stroke_width,
+            use_margins=use_margins      # Hardcoded: True = margins with border, False = minimal padding
         )
 
         filepaths = []
@@ -71,6 +77,7 @@ def generate(request):
             "status": "success",
             "pages_generated": result["pages_generated"],
             "generation_time": result["generation_time"],
+            "layout_mode": result["layout_mode"],  # New: shows "margins" or "padding"
             "files": filepaths
         })
 
@@ -82,10 +89,11 @@ def generate(request):
 @login_required
 def home(request):
     UsageStats.increment_visitors()
-    stats = UsageStats.get()
+    # stats = UsageStats.get()
 
     return render(request, 'writing/index.html', {
-        "visitors": stats.total_visitors,
-        "generators": stats.total_generators,
+        # "visitors": stats.total_visitors,
+        # "generators": stats.total_generators,
+
         "style_range": range(13),
     })

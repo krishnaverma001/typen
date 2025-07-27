@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+.venv/
+
+# IDE/editor files
+*.swp
+*.swo
+*.bak
+*.tmp
+.idea/
+.vscode/
+*.iml
+
+# Logs & local files
+*.log
+*.db
+*.sqlite3
+*.pid
+
+# Secrets
+.env
+*.svg
+*.h5
+
+# Git
+.git/
+.gitignore
+
+# OS metadata
+.DS_Store
+Thumbs.db
