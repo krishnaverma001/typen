@@ -1,0 +1,7 @@
+[[07/23/2025 08:36:10 PM]] Not Found: /media/user/kv/page_001.svg
+[[07/23/2025 08:43:40 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/23/2025 08:45:52 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/23/2025 08:45:52 PM]] Not Found: /favicon.ico
+[[07/23/2025 08:46:03 PM]] Not Found: /media/user/kv/page_001.svg
+[[07/23/2025 08:46:48 PM]] Not Found: /media/user/kv/page_001.svg
+[[07/23/2025 08:55:23 PM]] E:\Projects\handwriting\config\settings.py changed, reloading.

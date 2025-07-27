@@ -1,0 +1,5 @@
+[[07/26/2025 01:20:41 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/26/2025 01:27:56 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/26/2025 01:36:19 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/26/2025 01:36:20 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/26/2025 01:44:55 PM]] E:\Projects\handwriting\writing\model\generator.py changed, reloading.
