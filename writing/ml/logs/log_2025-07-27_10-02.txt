@@ -1,0 +1,88 @@
+[[07/27/2025 10:02:32 AM]] Not Found: /favicon.ico
+[[07/27/2025 10:07:12 AM]] Not Found: /favicon.ico
+[[07/27/2025 10:07:31 AM]] Not Found: /favicon.ico
+[[07/27/2025 10:54:41 AM]] Not Found: /favicon.ico
+[[07/27/2025 10:54:49 AM]] Not Found: /favicon.ico
+[[07/27/2025 10:54:56 AM]] Not Found: /favicon.ico
+[[07/27/2025 10:59:22 AM]] Not Found: /favicon.ico
+[[07/27/2025 10:59:28 AM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:15:17 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:15:17 PM]] Not Found: /favicon.ico
+[[07/27/2025 12:22:59 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:22:59 PM]] Not Found: /favicon.ico
+[[07/27/2025 12:23:17 PM]] Internal Server Error: /u/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader_tags.py", line 104, in find_template
+    template_name, skip=history,
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Projects\handwriting\user\views.py", line 30, in login_view
+    return render(request, 'user/login.html', {'form': form})
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\HP\anaconda3\envs\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[[07/27/2025 12:23:18 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:23:20 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:23:20 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:25:29 PM]] Not Found: /favicon.ico
+[[07/27/2025 12:27:04 PM]] Not Found: /favicon.ico
+[[07/27/2025 12:28:55 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:35:56 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:35:56 PM]] Not Found: /favicon.ico
+[[07/27/2025 12:57:14 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:57:21 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:57:22 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:57:24 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:57:25 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 12:59:53 PM]] Not Found: /favicon.ico
+[[07/27/2025 01:00:03 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:07:13 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:14:19 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:14:49 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:15:14 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:15:57 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:16:17 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:18:44 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:20:14 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:22:09 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:30:53 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:36:06 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:41:26 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 01:41:42 PM]] Not Found: /favicon.ico

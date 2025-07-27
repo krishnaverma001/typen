@@ -1,0 +1,2 @@
+[[07/23/2025 08:31:50 PM]] Not Found: /media/user/kv/page_001_hMLKjgC.svg
+[[07/23/2025 08:33:50 PM]] E:\Projects\handwriting\writing\views.py changed, reloading.

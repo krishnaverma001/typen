@@ -1,0 +1,5 @@
+[[07/25/2025 11:24:25 AM]] Watching for file changes with StatReloader
+[[07/25/2025 11:24:32 AM]] E:\Projects\handwriting\writing\model\generator.py changed, reloading.
+[[07/25/2025 11:24:52 AM]] Watching for file changes with StatReloader
+[[07/25/2025 11:27:04 AM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/25/2025 11:32:53 AM]] E:\Projects\handwriting\writing\model\generator.py changed, reloading.
