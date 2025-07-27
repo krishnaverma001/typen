@@ -1,0 +1,8 @@
+[[07/22/2025 10:27:08 AM]] Not Found: /favicon.ico
+[[07/22/2025 10:27:30 AM]] Not Found: /generate/
+[[07/22/2025 10:27:35 AM]] Not Found: /generate/
+[[07/22/2025 10:27:36 AM]] Not Found: /generate/
+[[07/22/2025 10:27:36 AM]] Not Found: /generate/
+[[07/22/2025 10:27:38 AM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/22/2025 10:27:40 AM]] Not Found: /generate/
+[[07/22/2025 10:30:02 AM]] E:\Projects\handwriting\writing\views.py changed, reloading.

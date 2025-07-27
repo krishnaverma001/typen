@@ -1,0 +1,2 @@
+[[07/25/2025 11:32:02 PM]] Watching for file changes with StatReloader
+[[07/25/2025 11:33:31 PM]] E:\Projects\handwriting\writing\apps.py changed, reloading.

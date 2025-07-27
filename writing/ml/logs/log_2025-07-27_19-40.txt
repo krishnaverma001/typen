@@ -1,0 +1,2 @@
+[[07/27/2025 07:45:45 PM]] Not Found: /favicon.ico
+[[07/27/2025 07:49:13 PM]] E:\Projects\handwriting\writing\model\generator.py changed, reloading.
