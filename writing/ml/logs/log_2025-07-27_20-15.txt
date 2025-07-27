@@ -1,0 +1,9 @@
+[[07/27/2025 08:15:27 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 08:18:17 PM]] Not Found: /favicon.ico
+[[07/27/2025 08:18:21 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 08:18:37 PM]] Not Found: /favicon.ico
+[[07/27/2025 08:18:47 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 08:19:36 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 08:19:37 PM]] Not Found: /favicon.ico
+[[07/27/2025 08:19:48 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/27/2025 08:20:02 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json

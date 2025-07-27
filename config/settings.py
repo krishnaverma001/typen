@@ -8,7 +8,7 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 IMG_DIR = BASE_DIR / 'media' / 'user'
-MODEL_DIR = BASE_DIR / 'writing' / 'model'
+MODEL_DIR = BASE_DIR / 'writing' / 'ml'
 CHECKPOINTS_DIR = MODEL_DIR / 'checkpoints'
 STYLES_DIR = MODEL_DIR / 'styles'
 LOGS_DIR = MODEL_DIR / 'logs'

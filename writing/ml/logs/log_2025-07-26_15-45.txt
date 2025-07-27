@@ -1,0 +1,3 @@
+[[07/26/2025 03:45:58 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[[07/26/2025 03:46:04 PM]] Internal Server Error: /generate/
+[[07/26/2025 03:47:05 PM]] E:\Projects\handwriting\writing\views.py changed, reloading.

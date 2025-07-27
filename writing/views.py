@@ -15,7 +15,7 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
 from .models import UserImage, UsageStats
-from .model.generator import HANDWRITING_GENERATOR
+from .ml.generator import HANDWRITING_GENERATOR
 
 @login_required
 @csrf_exempt
