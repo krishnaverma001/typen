@@ -1,0 +1,2 @@
+[[07/28/2025 01:45:20 AM]] Not Found: /favicon.ico
+[[07/28/2025 01:48:43 AM]] E:\Projects\handwriting\config\settings.py changed, reloading.
