@@ -1,0 +1,1 @@
+[[07/24/2025 04:13:26 PM]] E:\Projects\handwriting\config\settings.py changed, reloading.
