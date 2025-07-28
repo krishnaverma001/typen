@@ -250,6 +250,10 @@
         display: none;
     }
 
+    #generate-btn.generating {
+        cursor: not-allowed;
+    }
+
     .generating .loader {
         display: block;
     }
@@ -496,6 +500,7 @@
 
     // Margin state (false = minimal padding, true = document margins)
     let useMargins = false;
+    let isGenerating = false; // Track if generation is in progress
 
     // Initialize slider values
     widthValue.textContent = widthSlider.value;
@@ -530,6 +535,9 @@
 
     // Generate function
     function generate() {
+        // Prevent multiple clicks
+        if (isGenerating) return;
+
         const text = textInput.value.trim();
         const style = document.getElementById("style-select").value;
         const strokeWidth = widthSlider.value;
@@ -547,6 +555,10 @@
             </div>`;
             return;
         }
+
+        // Set generating state
+        isGenerating = true;
+        generateBtn.disabled = true;
 
         // Show loading state
         generateBtn.classList.add('generating');
@@ -618,6 +630,9 @@
             </div>`;
         })
         .finally(() => {
+            // Reset generating state
+            isGenerating = false;
+            generateBtn.disabled = false;
             generateBtn.classList.remove('generating');
         });
     }
