@@ -387,7 +387,7 @@
                         </svg>
                         Text to convert
                     </label>
-                    <textarea id="text-input" placeholder="Type or paste your text here..." maxlength="3000"></textarea>
+                    <textarea id="text-input" placeholder="Type or paste your text here..." maxlength="3000">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</textarea>
                 </div>
 
                 <div class="control-group">
@@ -416,8 +416,8 @@
                         Stroke width
                     </label>
                     <div class="slider-container">
-                        <input id="width-slider" type="range" min="0.5" max="3.5" value="1.25" step="0.01">
-                        <span id="width-value" class="slider-value">1.25</span>
+                        <input id="width-slider" type="range" min="0.5" max="3.5" value="1.75" step="0.01">
+                        <span id="width-value" class="slider-value">1.75</span>
                     </div>
                 </div>
 
@@ -431,7 +431,7 @@
                         Legibility
                     </label>
                     <div class="slider-container">
-                        <input id="bias-slider" type="range" min="0.15" max="2.5" value="0.75" step="0.01">
+                        <input id="bias-slider" type="range" min="0.15" max="2.5" value="2" step="0.01">
                         <span id="bias-value" class="slider-value">0.75</span>
                     </div>
                 </div>
@@ -475,7 +475,7 @@
         <div class="output-header">
             <h2 class="output-title">Results</h2>
             <div class="stats">
-                <span id="char-count">0</span> characters
+                <span id="char-count">336</span> characters
             </div>
         </div>
 
@@ -494,6 +494,7 @@
     const generateBtn = document.getElementById("generate-btn");
     const textInput = document.getElementById("text-input");
     const charCount = document.getElementById("char-count");
+    const styleSelect = document.getElementById("style-select");
 
     // Margin toggle elements
     const marginToggle = document.getElementById("margin-toggle");
@@ -533,13 +534,54 @@
         }
     }
 
+    const demo = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.";
+
+    function loadDemoSVG(style) {
+        const output = document.getElementById("output");
+        const demoSVGPath = `/media/styles/style-${style}.svg`;
+
+        output.innerHTML = `
+            <div class="status success">
+                Handwriting preview for style ${style}
+            </div>
+            <div class="output-grid">
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="${demoSVGPath}" alt="Demo handwriting style ${style}" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    styleSelect.addEventListener('change', () => {
+        const text = textInput.value.trim();
+        const selectedStyle = styleSelect.value;
+
+        if (text === demo) {
+            loadDemoSVG(selectedStyle);
+        } else {
+            // Optional: clear output or keep current
+            // document.getElementById("output").innerHTML = "";
+        }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const text = textInput.value.trim();
+        const selectedStyle = styleSelect.value;
+
+        if (text === demo) {
+            loadDemoSVG(selectedStyle);
+        }
+    });
+
     // Generate function
     function generate() {
         // Prevent multiple clicks
         if (isGenerating) return;
 
         const text = textInput.value.trim();
-        const style = document.getElementById("style-select").value;
+        const style = styleSelect.value;
         const strokeWidth = widthSlider.value;
         const bias = biasSlider.value;
         const output = document.getElementById("output");
@@ -581,7 +623,7 @@
                 style: style,
                 stroke_width: strokeWidth,
                 bias: bias,
-                use_margins: useMargins.toString()  // NEW: Send margin preference
+                use_margins: useMargins.toString()
             })
         })
         .then(res => res.json())
