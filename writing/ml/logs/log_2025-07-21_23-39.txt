@@ -1,3 +1,0 @@
-[[07/21/2025 11:56:36 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
-[[07/21/2025 11:56:36 PM]] Not Found: /favicon.ico
-[[07/21/2025 11:59:28 PM]] E:\Projects\handwriting\writing\models.py changed, reloading.

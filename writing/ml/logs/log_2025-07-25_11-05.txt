@@ -1,2 +1,0 @@
-[[07/25/2025 11:05:28 AM]] Watching for file changes with StatReloader
-[[07/25/2025 11:10:06 AM]] E:\Projects\handwriting\writing\views.py changed, reloading.
