@@ -607,14 +607,6 @@ class HandwritingGenerator(object):
 def generate_handwritten_document(text, output_dir="img/temp", **kwargs):
     """
     Convenience function to generate handwritten document from text
-
-    Args:
-        text (str): Input text
-        output_dir (str): Output directory
-        **kwargs: Additional parameters for HandwritingGenerator
-
-    Returns:
-        dict: Generation statistics
     """
     return HANDWRITING_GENERATOR.generate_handwritten_pages(
         text, output_dir=output_dir, **kwargs

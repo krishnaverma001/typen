@@ -5,6 +5,9 @@ from decouple import config
 
 @receiver(post_migrate)
 def create_superuser_signal(sender, **kwargs):
+    if sender.name == 'auth':
+        return
+     
     User = get_user_model()
 
     try:
@@ -17,6 +20,6 @@ def create_superuser_signal(sender, **kwargs):
 
     if not User.objects.filter(username=username).exists():
         User.objects.create_superuser(username=username, email=email, password=password)
-        print(f"✅ Superuser '{username}' created.")
+        print(f"Superuser '{username}' created.")
     else:
         print(f"ℹ Superuser '{username}' already exists.")
