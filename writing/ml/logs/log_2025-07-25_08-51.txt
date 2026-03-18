@@ -1,5 +1,0 @@
-[[07/25/2025 08:51:17 AM]] Watching for file changes with StatReloader
-[[07/25/2025 09:06:33 AM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
-[[07/25/2025 09:06:41 AM]] Not Found: /favicon.ico
-[[07/25/2025 09:11:02 AM]] Not Found: /favicon.ico
-[[07/25/2025 11:04:18 AM]] E:\Projects\handwriting\writing\views.py changed, reloading.

@@ -1,2 +1,0 @@
-[[07/26/2025 03:36:19 PM]] Not Found: /.well-known/appspecific/com.chrome.devtools.json
-[[07/26/2025 03:39:43 PM]] E:\Projects\handwriting\writing\views.py changed, reloading.

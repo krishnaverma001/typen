@@ -1,3 +1,0 @@
-[[07/25/2025 11:14:54 PM]] Watching for file changes with StatReloader
-[[07/25/2025 11:15:30 PM]] Not Found: /favicon.ico
-[[07/25/2025 11:16:37 PM]] E:\Projects\handwriting\writing\apps.py changed, reloading.

@@ -1445,3 +1445,28 @@ django.db.utils.OperationalError: no such table: user_customuser
 [INFO] 2026-03-18 16:51:26 writing.views generation_history:161 - Paginated results: 0 items
 [WARNING] 2026-03-18 16:51:27 django.request log_response:230 - Not Found: /favicon.ico
 [WARNING] 2026-03-18 16:51:27 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-18 19:19:44 writing.views generation_history:150 - Page: 1, Per page: 5
+[INFO] 2026-03-18 19:19:44 writing.views generation_history:155 - Total generations found: 0
+[INFO] 2026-03-18 19:19:44 writing.views generation_history:161 - Paginated results: 0 items
+[INFO] 2026-03-18 19:20:59 writing.views generate:27 - User: kv
+[INFO] 2026-03-18 19:20:59 writing.views generate:37 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-18 19:20:59 writing.views generate:38 - Text length: 80
+[INFO] 2026-03-18 19:20:59 writing.views generate:47 - Creating Generation record...
+[INFO] 2026-03-18 19:20:59 writing.views generate:60 - Generation created - ID: 083d9887-22b1-4ed6-b926-5a0d84c2c75d
+[INFO] 2026-03-18 19:20:59 writing.views generate:65 - Session output directory: E:\Projects\typen\media\user\kv\gen_083d9887-22b1-4ed6-b926-5a0d84c2c75d
+[INFO] 2026-03-18 19:20:59 writing.views generate:67 - Starting handwriting generation...
+[INFO] 2026-03-18 19:21:41 writing.views generate:83 - Generation updated with 1 pages
+[INFO] 2026-03-18 19:21:41 writing.views generate:87 - Processing page 1/1
+[INFO] 2026-03-18 19:21:41 writing.views generate:90 - Page file path: E:\Projects\typen\media\user\kv\gen_083d9887-22b1-4ed6-b926-5a0d84c2c75d\page_001.svg
+[INFO] 2026-03-18 19:21:41 writing.views generate:95 - Read 30227 bytes from page_001.svg
+[INFO] 2026-03-18 19:21:41 writing.views generate:99 - UserImage instance created for generation 083d9887-22b1-4ed6-b926-5a0d84c2c75d
+[INFO] 2026-03-18 19:21:41 writing.views generate:104 - Saved to: E:\Projects\typen\media\user\kv\083d9887-22b1-4ed6-b926-5a0d84c2c75d\page_001.svg
+[INFO] 2026-03-18 19:21:41 writing.views generate:105 - File URL: /media/user/kv/083d9887-22b1-4ed6-b926-5a0d84c2c75d/page_001.svg
+[INFO] 2026-03-18 19:21:41 writing.views generation_history:150 - Page: 1, Per page: 5
+[INFO] 2026-03-18 19:21:41 writing.views generation_history:155 - Total generations found: 1
+[INFO] 2026-03-18 19:21:41 writing.views generation_history:161 - Paginated results: 1 items
+[INFO] 2026-03-18 19:21:41 writing.views generation_history:166 - Generation 083d9887-22b1-4ed6-b926-5a0d84c2c75d: 1 pages
+[INFO] 2026-03-18 19:21:44 writing.views generation_detail:191 - Generation found: 083d9887-22b1-4ed6-b926-5a0d84c2c75d
+[INFO] 2026-03-18 19:21:44 writing.views generation_detail:197 - Found 1 pages for generation
+[INFO] 2026-03-18 19:22:08 writing.views generation_detail:191 - Generation found: 083d9887-22b1-4ed6-b926-5a0d84c2c75d
+[INFO] 2026-03-18 19:22:08 writing.views generation_detail:197 - Found 1 pages for generation

@@ -1,2 +1,0 @@
-[[07/20/2025 09:14:52 PM]] Internal Server Error: /
-[[07/20/2025 09:17:23 PM]] E:\Projects\handwriting\config\settings.py changed, reloading.

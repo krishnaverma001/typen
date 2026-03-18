@@ -1,2 +1,0 @@
-[[07/20/2025 10:02:39 PM]] Not Found: /favicon.ico
-[[07/20/2025 10:06:45 PM]] E:\Projects\handwriting\writing\views.py changed, reloading.

@@ -1,2 +1,0 @@
-[[07/25/2025 10:22:05 PM]] Watching for file changes with StatReloader
-[[07/25/2025 10:27:08 PM]] E:\Projects\handwriting\writing\model\generator.py changed, reloading.
