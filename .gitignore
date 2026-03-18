@@ -6,4 +6,5 @@ db.sqlite3
 staticfiles/
 .idea
 .vscode/
+logs/
 /writing/ml/logs/
