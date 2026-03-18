@@ -1,0 +1,1447 @@
+[WARNING] 2026-03-15 11:52:43 django.request log_response:230 - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[WARNING] 2026-03-15 11:52:43 django.server log_message:161 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3175
+[INFO] 2026-03-15 11:52:47 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-15 11:52:47 writing.views generate:28 - User: kv
+[INFO] 2026-03-15 11:52:47 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-15 11:52:47 writing.views generate:39 - Text length: 336
+[INFO] 2026-03-15 11:52:47 writing.views generate:48 - Output directory: E:\Projects\typen\media\user\kv
+[INFO] 2026-03-15 11:52:47 writing.views generate:50 - Starting handwriting generation...
+[INFO] 2026-03-15 11:53:13 writing.views generate:63 - Creating Generation record...
+[ERROR] 2026-03-15 11:53:13 writing.views generate:113 - GENERATE ERROR: no such table: writing_generation
+Traceback (most recent call last):
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: writing_generation
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Projects\typen\writing\views.py", line 74, in generate
+    generation_time=result["generation_time"],
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: writing_generation
+[ERROR] 2026-03-15 11:53:13 django.request log_response:230 - Internal Server Error: /generate/
+[ERROR] 2026-03-15 11:53:13 django.server log_message:161 - "POST /generate/ HTTP/1.1" 500 46
+[WARNING] 2026-03-15 23:20:46 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-15 23:20:46 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3064
+[INFO] 2026-03-15 23:20:47 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-15 23:20:47 writing.views generate:28 - User: kv
+[INFO] 2026-03-15 23:20:47 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-15 23:20:47 writing.views generate:39 - Text length: 336
+[INFO] 2026-03-15 23:20:47 writing.views generate:48 - Output directory: E:\Projects\typen\media\user\kv
+[INFO] 2026-03-15 23:20:47 writing.views generate:50 - Starting handwriting generation...
+[INFO] 2026-03-15 23:21:11 writing.views generate:63 - Creating Generation record...
+[ERROR] 2026-03-15 23:21:11 writing.views generate:113 - GENERATE ERROR: no such table: writing_generation
+Traceback (most recent call last):
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: writing_generation
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Projects\typen\writing\views.py", line 74, in generate
+    generation_time=result["generation_time"],
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: writing_generation
+[ERROR] 2026-03-15 23:21:11 django.request log_response:230 - Internal Server Error: /generate/
+[ERROR] 2026-03-15 23:21:11 django.server log_message:161 - "POST /generate/ HTTP/1.1" 500 46
+[WARNING] 2026-03-15 23:26:57 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-15 23:26:57 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3064
+[INFO] 2026-03-15 23:27:07 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-15 23:27:07 writing.views generate:28 - User: kv
+[INFO] 2026-03-15 23:27:07 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-15 23:27:07 writing.views generate:39 - Text length: 336
+[INFO] 2026-03-15 23:27:07 writing.views generate:48 - Output directory: E:\Projects\typen\media\user\kv
+[INFO] 2026-03-15 23:27:07 writing.views generate:50 - Starting handwriting generation...
+[INFO] 2026-03-15 23:27:26 writing.views generate:63 - Creating Generation record...
+[INFO] 2026-03-15 23:27:26 writing.views generate:76 - Generation created - ID: 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00
+[INFO] 2026-03-15 23:27:26 writing.views generate:80 - Processing page 1/1
+[INFO] 2026-03-15 23:27:26 writing.views generate:83 - Page file path: E:\Projects\typen\media\user\kv\page_001.svg
+[INFO] 2026-03-15 23:27:26 writing.views generate:88 - Read 122584 bytes from page_001.svg
+[INFO] 2026-03-15 23:27:26 writing.views generate:92 - UserImage instance created for generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00
+[INFO] 2026-03-15 23:27:26 writing.views generate:97 - Saved to: E:\Projects\typen\media\user\kv\gen_6bf9b86a-89db-4cee-a9ca-cd29e6f35c00\page_001.svg
+[INFO] 2026-03-15 23:27:26 writing.views generate:98 - File URL: /media/user/kv/gen_6bf9b86a-89db-4cee-a9ca-cd29e6f35c00/page_001.svg
+[INFO] 2026-03-15 23:27:26 writing.views generate:102 - === GENERATE REQUEST SUCCESS - 1 files ===
+[WARNING] 2026-03-15 23:36:02 django.request log_response:230 - Not Found: /generation_history/
+[WARNING] 2026-03-15 23:36:02 django.server log_message:161 - "GET /generation_history/?page=1&per_page=5 HTTP/1.1" 404 3110
+[INFO] 2026-03-15 23:36:29 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-15 23:36:29 writing.views generate:28 - User: kv
+[INFO] 2026-03-15 23:36:29 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-15 23:36:29 writing.views generate:39 - Text length: 336
+[INFO] 2026-03-15 23:36:29 writing.views generate:48 - Output directory: E:\Projects\typen\media\user\kv
+[INFO] 2026-03-15 23:36:29 writing.views generate:50 - Starting handwriting generation...
+[INFO] 2026-03-15 23:36:56 writing.views generate:63 - Creating Generation record...
+[INFO] 2026-03-15 23:36:57 writing.views generate:76 - Generation created - ID: a04f0492-4151-495e-90bb-ffc9401f9f13
+[INFO] 2026-03-15 23:36:57 writing.views generate:80 - Processing page 1/1
+[INFO] 2026-03-15 23:36:57 writing.views generate:83 - Page file path: E:\Projects\typen\media\user\kv\page_001.svg
+[INFO] 2026-03-15 23:36:57 writing.views generate:88 - Read 123377 bytes from page_001.svg
+[INFO] 2026-03-15 23:36:57 writing.views generate:92 - UserImage instance created for generation a04f0492-4151-495e-90bb-ffc9401f9f13
+[INFO] 2026-03-15 23:36:57 writing.views generate:97 - Saved to: E:\Projects\typen\media\user\kv\gen_a04f0492-4151-495e-90bb-ffc9401f9f13\page_001.svg
+[INFO] 2026-03-15 23:36:57 writing.views generate:98 - File URL: /media/user/kv/gen_a04f0492-4151-495e-90bb-ffc9401f9f13/page_001.svg
+[INFO] 2026-03-15 23:36:57 writing.views generate:102 - === GENERATE REQUEST SUCCESS - 1 files ===
+[INFO] 2026-03-15 23:41:03 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-15 23:41:03 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-15 23:41:03 writing.views generation_history:150 - Total generations found: 2
+[INFO] 2026-03-15 23:41:03 writing.views generation_history:156 - Paginated results: 2 items
+[INFO] 2026-03-15 23:41:03 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-15 23:41:03 writing.views generation_history:161 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-15 23:41:03 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-15 23:41:05 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: a04f0492-4151-495e-90bb-ffc9401f9f13, User: kv ===
+[INFO] 2026-03-15 23:41:05 writing.views generation_detail:188 - Generation found: a04f0492-4151-495e-90bb-ffc9401f9f13
+[INFO] 2026-03-15 23:41:05 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-15 23:41:05 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-15 23:41:14 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00, User: kv ===
+[INFO] 2026-03-15 23:41:14 writing.views generation_detail:188 - Generation found: 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00
+[INFO] 2026-03-15 23:41:14 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-15 23:41:14 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-15 23:41:29 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-15 23:41:29 writing.views generate:28 - User: kv
+[INFO] 2026-03-15 23:41:29 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-15 23:41:29 writing.views generate:39 - Text length: 5
+[INFO] 2026-03-15 23:41:29 writing.views generate:48 - Output directory: E:\Projects\typen\media\user\kv
+[INFO] 2026-03-15 23:41:29 writing.views generate:50 - Starting handwriting generation...
+[INFO] 2026-03-15 23:41:31 writing.views generate:63 - Creating Generation record...
+[INFO] 2026-03-15 23:41:31 writing.views generate:76 - Generation created - ID: 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8
+[INFO] 2026-03-15 23:41:31 writing.views generate:80 - Processing page 1/1
+[INFO] 2026-03-15 23:41:31 writing.views generate:83 - Page file path: E:\Projects\typen\media\user\kv\page_001.svg
+[INFO] 2026-03-15 23:41:31 writing.views generate:88 - Read 2236 bytes from page_001.svg
+[INFO] 2026-03-15 23:41:31 writing.views generate:92 - UserImage instance created for generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8
+[INFO] 2026-03-15 23:41:32 writing.views generate:97 - Saved to: E:\Projects\typen\media\user\kv\gen_1999d1e7-a8a6-4a22-84d8-cc181d4b00f8\page_001.svg
+[INFO] 2026-03-15 23:41:32 writing.views generate:98 - File URL: /media/user/kv/gen_1999d1e7-a8a6-4a22-84d8-cc181d4b00f8/page_001.svg
+[INFO] 2026-03-15 23:41:32 writing.views generate:102 - === GENERATE REQUEST SUCCESS - 1 files ===
+[INFO] 2026-03-15 23:41:35 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-15 23:41:35 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-15 23:41:35 writing.views generation_history:150 - Total generations found: 3
+[INFO] 2026-03-15 23:41:35 writing.views generation_history:156 - Paginated results: 3 items
+[INFO] 2026-03-15 23:41:35 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-15 23:41:35 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-15 23:41:35 writing.views generation_history:161 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-15 23:41:35 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-15 23:45:12 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8, User: kv ===
+[INFO] 2026-03-15 23:45:12 writing.views generation_detail:188 - Generation found: 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8
+[INFO] 2026-03-15 23:45:12 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-15 23:45:12 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-15 23:53:55 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8, User: kv ===
+[INFO] 2026-03-15 23:53:55 writing.views generation_detail:188 - Generation found: 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8
+[INFO] 2026-03-15 23:53:55 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-15 23:53:55 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-15 23:59:36 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-15 23:59:36 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-15 23:59:36 writing.views generation_history:150 - Total generations found: 3
+[INFO] 2026-03-15 23:59:36 writing.views generation_history:156 - Paginated results: 3 items
+[INFO] 2026-03-15 23:59:36 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-15 23:59:36 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-15 23:59:36 writing.views generation_history:161 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-15 23:59:36 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-15 23:59:36 django.request log_response:230 - Not Found: /media/user/gen_1999d1e7-a8a6-4a22-84d8-cc181d4b00f8/page_001.svg
+[WARNING] 2026-03-15 23:59:36 django.request log_response:230 - Not Found: /media/user/gen_6bf9b86a-89db-4cee-a9ca-cd29e6f35c00/page_001.svg
+[WARNING] 2026-03-15 23:59:36 django.request log_response:230 - Not Found: /media/user/gen_a04f0492-4151-495e-90bb-ffc9401f9f13/page_001.svg
+[WARNING] 2026-03-15 23:59:36 django.server log_message:161 - "GET /media/user/gen_1999d1e7-a8a6-4a22-84d8-cc181d4b00f8/page_001.svg?v=1773599376109 HTTP/1.1" 404 3489
+[WARNING] 2026-03-15 23:59:36 django.server log_message:161 - "GET /media/user/gen_6bf9b86a-89db-4cee-a9ca-cd29e6f35c00/page_001.svg?v=1773599376109 HTTP/1.1" 404 3489
+[WARNING] 2026-03-15 23:59:36 django.server log_message:161 - "GET /media/user/gen_a04f0492-4151-495e-90bb-ffc9401f9f13/page_001.svg?v=1773599376109 HTTP/1.1" 404 3489
+[INFO] 2026-03-15 23:59:38 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8, User: kv ===
+[INFO] 2026-03-15 23:59:38 writing.views generation_detail:188 - Generation found: 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8
+[INFO] 2026-03-15 23:59:38 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-15 23:59:38 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-15 23:59:46 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8, User: kv ===
+[INFO] 2026-03-15 23:59:46 writing.views generation_detail:188 - Generation found: 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8
+[INFO] 2026-03-15 23:59:46 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-15 23:59:46 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-15 23:59:54 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-15 23:59:54 writing.views generate:28 - User: kv
+[INFO] 2026-03-15 23:59:54 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-15 23:59:54 writing.views generate:39 - Text length: 1
+[INFO] 2026-03-15 23:59:54 writing.views generate:48 - Output directory: E:\Projects\typen\media\user\kv
+[INFO] 2026-03-15 23:59:54 writing.views generate:50 - Starting handwriting generation...
+[INFO] 2026-03-15 23:59:56 writing.views generate:63 - Creating Generation record...
+[INFO] 2026-03-15 23:59:57 writing.views generate:76 - Generation created - ID: 33ae12d0-ce21-47a2-9a32-4999004f6f6d
+[INFO] 2026-03-15 23:59:57 writing.views generate:80 - Processing page 1/1
+[INFO] 2026-03-15 23:59:57 writing.views generate:83 - Page file path: E:\Projects\typen\media\user\kv\page_001.svg
+[INFO] 2026-03-15 23:59:57 writing.views generate:88 - Read 1248 bytes from page_001.svg
+[INFO] 2026-03-15 23:59:57 writing.views generate:92 - UserImage instance created for generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d
+[INFO] 2026-03-15 23:59:57 writing.views generate:97 - Saved to: E:\Projects\typen\media\user\kv\gen_33ae12d0-ce21-47a2-9a32-4999004f6f6d\page_001.svg
+[INFO] 2026-03-15 23:59:57 writing.views generate:98 - File URL: /media/user/kv/gen_33ae12d0-ce21-47a2-9a32-4999004f6f6d/page_001.svg
+[INFO] 2026-03-15 23:59:57 writing.views generate:102 - === GENERATE REQUEST SUCCESS - 1 files ===
+[INFO] 2026-03-15 23:59:57 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-15 23:59:57 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-15 23:59:57 writing.views generation_history:150 - Total generations found: 4
+[INFO] 2026-03-15 23:59:57 writing.views generation_history:156 - Paginated results: 4 items
+[INFO] 2026-03-15 23:59:57 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-15 23:59:57 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-15 23:59:57 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-15 23:59:57 writing.views generation_history:161 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-15 23:59:57 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-15 23:59:57 django.request log_response:230 - Not Found: /media/user/gen_1999d1e7-a8a6-4a22-84d8-cc181d4b00f8/page_001.svg
+[WARNING] 2026-03-15 23:59:57 django.server log_message:161 - "GET /media/user/gen_1999d1e7-a8a6-4a22-84d8-cc181d4b00f8/page_001.svg?v=1773599397151 HTTP/1.1" 404 3489
+[WARNING] 2026-03-15 23:59:57 django.request log_response:230 - Not Found: /media/user/gen_33ae12d0-ce21-47a2-9a32-4999004f6f6d/page_001.svg
+[WARNING] 2026-03-15 23:59:57 django.request log_response:230 - Not Found: /media/user/gen_a04f0492-4151-495e-90bb-ffc9401f9f13/page_001.svg
+[WARNING] 2026-03-15 23:59:57 django.request log_response:230 - Not Found: /media/user/gen_6bf9b86a-89db-4cee-a9ca-cd29e6f35c00/page_001.svg
+[WARNING] 2026-03-15 23:59:57 django.server log_message:161 - "GET /media/user/gen_33ae12d0-ce21-47a2-9a32-4999004f6f6d/page_001.svg?v=1773599397151 HTTP/1.1" 404 3489
+[WARNING] 2026-03-15 23:59:57 django.server log_message:161 - "GET /media/user/gen_a04f0492-4151-495e-90bb-ffc9401f9f13/page_001.svg?v=1773599397151 HTTP/1.1" 404 3489
+[WARNING] 2026-03-15 23:59:57 django.server log_message:161 - "GET /media/user/gen_6bf9b86a-89db-4cee-a9ca-cd29e6f35c00/page_001.svg?v=1773599397152 HTTP/1.1" 404 3489
+[INFO] 2026-03-15 23:59:58 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 33ae12d0-ce21-47a2-9a32-4999004f6f6d, User: kv ===
+[INFO] 2026-03-15 23:59:58 writing.views generation_detail:188 - Generation found: 33ae12d0-ce21-47a2-9a32-4999004f6f6d
+[INFO] 2026-03-15 23:59:58 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-15 23:59:58 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:00:23 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 33ae12d0-ce21-47a2-9a32-4999004f6f6d, User: kv ===
+[INFO] 2026-03-16 00:00:23 writing.views generation_detail:188 - Generation found: 33ae12d0-ce21-47a2-9a32-4999004f6f6d
+[INFO] 2026-03-16 00:00:23 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:00:23 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:05:30 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:05:30 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:05:30 writing.views generation_history:150 - Total generations found: 4
+[INFO] 2026-03-16 00:05:30 writing.views generation_history:156 - Paginated results: 4 items
+[INFO] 2026-03-16 00:05:30 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:05:30 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:05:30 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 00:05:30 writing.views generation_history:161 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-16 00:05:30 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:05:33 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 33ae12d0-ce21-47a2-9a32-4999004f6f6d, User: kv ===
+[INFO] 2026-03-16 00:05:33 writing.views generation_detail:188 - Generation found: 33ae12d0-ce21-47a2-9a32-4999004f6f6d
+[INFO] 2026-03-16 00:05:33 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:05:33 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[WARNING] 2026-03-16 00:05:34 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 00:05:34 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 00:05:44 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-16 00:05:44 writing.views generate:28 - User: kv
+[INFO] 2026-03-16 00:05:44 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-16 00:05:44 writing.views generate:39 - Text length: 5
+[INFO] 2026-03-16 00:05:44 writing.views generate:48 - Output directory: E:\Projects\typen\media\user\kv
+[INFO] 2026-03-16 00:05:44 writing.views generate:50 - Starting handwriting generation...
+[INFO] 2026-03-16 00:05:46 writing.views generate:63 - Creating Generation record...
+[INFO] 2026-03-16 00:05:46 writing.views generate:76 - Generation created - ID: d57141bf-a97a-48e4-9801-09f52d47e4c5
+[INFO] 2026-03-16 00:05:46 writing.views generate:80 - Processing page 1/1
+[INFO] 2026-03-16 00:05:46 writing.views generate:83 - Page file path: E:\Projects\typen\media\user\kv\page_001.svg
+[INFO] 2026-03-16 00:05:46 writing.views generate:88 - Read 2725 bytes from page_001.svg
+[INFO] 2026-03-16 00:05:46 writing.views generate:92 - UserImage instance created for generation d57141bf-a97a-48e4-9801-09f52d47e4c5
+[INFO] 2026-03-16 00:05:46 writing.views generate:97 - Saved to: E:\Projects\typen\media\user\kv\gen_d57141bf-a97a-48e4-9801-09f52d47e4c5\page_001.svg
+[INFO] 2026-03-16 00:05:46 writing.views generate:98 - File URL: /media/user/kv/gen_d57141bf-a97a-48e4-9801-09f52d47e4c5/page_001.svg
+[INFO] 2026-03-16 00:05:46 writing.views generate:102 - === GENERATE REQUEST SUCCESS - 1 files ===
+[INFO] 2026-03-16 00:05:46 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:05:46 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:05:46 writing.views generation_history:150 - Total generations found: 5
+[INFO] 2026-03-16 00:05:46 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:05:46 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:05:46 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:05:46 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:05:46 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 00:05:46 writing.views generation_history:161 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-16 00:05:46 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:12:25 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:12:25 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:12:25 writing.views generation_history:150 - Total generations found: 5
+[INFO] 2026-03-16 00:12:25 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:12:25 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:12:25 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:12:25 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:12:25 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 00:12:25 writing.views generation_history:161 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-16 00:12:25 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 00:12:28 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 00:12:28 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 00:12:30 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: d57141bf-a97a-48e4-9801-09f52d47e4c5, User: kv ===
+[INFO] 2026-03-16 00:12:30 writing.views generation_detail:188 - Generation found: d57141bf-a97a-48e4-9801-09f52d47e4c5
+[INFO] 2026-03-16 00:12:30 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:12:30 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[WARNING] 2026-03-16 00:12:30 django.request log_response:230 - Not Found: /media/user/kv/gen_d57141bf-a97a-48e4-9801-09f52d47e4c5/page_001.svg
+[WARNING] 2026-03-16 00:12:30 django.server log_message:161 - "GET /media/user/kv/gen_d57141bf-a97a-48e4-9801-09f52d47e4c5/page_001.svg HTTP/1.1" 404 3485
+[INFO] 2026-03-16 00:12:42 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-16 00:12:42 writing.views generate:28 - User: kv
+[INFO] 2026-03-16 00:12:42 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-16 00:12:42 writing.views generate:39 - Text length: 5
+[INFO] 2026-03-16 00:12:42 writing.views generate:48 - Output directory: E:\Projects\typen\media\user\kv
+[INFO] 2026-03-16 00:12:42 writing.views generate:50 - Starting handwriting generation...
+[INFO] 2026-03-16 00:12:48 writing.views generate:63 - Creating Generation record...
+[INFO] 2026-03-16 00:12:48 writing.views generate:76 - Generation created - ID: 874ec03e-f17c-41c3-85b6-055dd580eeef
+[INFO] 2026-03-16 00:12:48 writing.views generate:80 - Processing page 1/1
+[INFO] 2026-03-16 00:12:48 writing.views generate:83 - Page file path: E:\Projects\typen\media\user\kv\page_001.svg
+[INFO] 2026-03-16 00:12:48 writing.views generate:88 - Read 2288 bytes from page_001.svg
+[INFO] 2026-03-16 00:12:48 writing.views generate:92 - UserImage instance created for generation 874ec03e-f17c-41c3-85b6-055dd580eeef
+[INFO] 2026-03-16 00:12:48 writing.views generate:97 - Saved to: E:\Projects\typen\media\user\kv\gen_874ec03e-f17c-41c3-85b6-055dd580eeef\page_001.svg
+[INFO] 2026-03-16 00:12:48 writing.views generate:98 - File URL: /media/user/kv/gen_874ec03e-f17c-41c3-85b6-055dd580eeef/page_001.svg
+[INFO] 2026-03-16 00:12:48 writing.views generate:102 - === GENERATE REQUEST SUCCESS - 1 files ===
+[INFO] 2026-03-16 00:12:48 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:12:48 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:12:48 writing.views generation_history:150 - Total generations found: 6
+[INFO] 2026-03-16 00:12:48 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:12:48 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:12:48 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:12:48 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:12:48 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:12:48 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 00:12:48 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:12:53 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:12:53 writing.views generation_history:145 - Page: 2, Per page: 5
+[INFO] 2026-03-16 00:12:53 writing.views generation_history:150 - Total generations found: 6
+[INFO] 2026-03-16 00:12:53 writing.views generation_history:156 - Paginated results: 1 items
+[INFO] 2026-03-16 00:12:53 writing.views generation_history:161 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-16 00:12:53 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:12:55 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:12:55 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:12:55 writing.views generation_history:150 - Total generations found: 6
+[INFO] 2026-03-16 00:12:55 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:12:55 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:12:55 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:12:55 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:12:55 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:12:55 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 00:12:55 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:12:56 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 874ec03e-f17c-41c3-85b6-055dd580eeef, User: kv ===
+[INFO] 2026-03-16 00:12:56 writing.views generation_detail:188 - Generation found: 874ec03e-f17c-41c3-85b6-055dd580eeef
+[INFO] 2026-03-16 00:12:56 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:12:56 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:15:27 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:15:27 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:15:27 writing.views generation_history:150 - Total generations found: 6
+[INFO] 2026-03-16 00:15:27 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:15:27 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:15:27 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:15:27 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:15:27 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:15:27 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 00:15:27 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:15:28 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 874ec03e-f17c-41c3-85b6-055dd580eeef, User: kv ===
+[INFO] 2026-03-16 00:15:28 writing.views generation_detail:188 - Generation found: 874ec03e-f17c-41c3-85b6-055dd580eeef
+[INFO] 2026-03-16 00:15:28 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:15:28 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:15:33 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:15:33 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:15:33 writing.views generation_history:150 - Total generations found: 6
+[INFO] 2026-03-16 00:15:33 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:15:33 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:15:33 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:15:33 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:15:33 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:15:33 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 00:15:33 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 00:15:33 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 00:15:33 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 00:15:35 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 874ec03e-f17c-41c3-85b6-055dd580eeef, User: kv ===
+[INFO] 2026-03-16 00:15:35 writing.views generation_detail:188 - Generation found: 874ec03e-f17c-41c3-85b6-055dd580eeef
+[INFO] 2026-03-16 00:15:35 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:15:35 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:15:39 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 874ec03e-f17c-41c3-85b6-055dd580eeef, User: kv ===
+[INFO] 2026-03-16 00:15:40 writing.views generation_detail:188 - Generation found: 874ec03e-f17c-41c3-85b6-055dd580eeef
+[INFO] 2026-03-16 00:15:40 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:15:40 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:15:41 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 874ec03e-f17c-41c3-85b6-055dd580eeef, User: kv ===
+[INFO] 2026-03-16 00:15:41 writing.views generation_detail:188 - Generation found: 874ec03e-f17c-41c3-85b6-055dd580eeef
+[INFO] 2026-03-16 00:15:41 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:15:41 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:21:05 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:21:05 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:21:05 writing.views generation_history:150 - Total generations found: 6
+[INFO] 2026-03-16 00:21:06 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:21:06 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:21:06 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:21:06 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:21:06 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:21:06 writing.views generation_history:161 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 00:21:06 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 00:21:06 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 00:21:06 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 00:21:07 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 874ec03e-f17c-41c3-85b6-055dd580eeef, User: kv ===
+[INFO] 2026-03-16 00:21:07 writing.views generation_detail:188 - Generation found: 874ec03e-f17c-41c3-85b6-055dd580eeef
+[INFO] 2026-03-16 00:21:07 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:21:07 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:22:19 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-16 00:22:19 writing.views generate:28 - User: kv
+[INFO] 2026-03-16 00:22:19 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: True
+[INFO] 2026-03-16 00:22:19 writing.views generate:39 - Text length: 1683
+[INFO] 2026-03-16 00:22:19 writing.views generate:48 - Output directory: E:\Projects\typen\media\user\kv
+[INFO] 2026-03-16 00:22:19 writing.views generate:50 - Starting handwriting generation...
+[INFO] 2026-03-16 00:24:12 writing.views generate:63 - Creating Generation record...
+[INFO] 2026-03-16 00:24:12 writing.views generate:76 - Generation created - ID: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:24:12 writing.views generate:80 - Processing page 1/3
+[INFO] 2026-03-16 00:24:12 writing.views generate:83 - Page file path: E:\Projects\typen\media\user\kv\page_001.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:88 - Read 280098 bytes from page_001.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:92 - UserImage instance created for generation 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:24:12 writing.views generate:97 - Saved to: E:\Projects\typen\media\user\kv\gen_0a720a9d-b649-43c6-b07f-425738b6e47b\page_001.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:98 - File URL: /media/user/kv/gen_0a720a9d-b649-43c6-b07f-425738b6e47b/page_001.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:80 - Processing page 2/3
+[INFO] 2026-03-16 00:24:12 writing.views generate:83 - Page file path: E:\Projects\typen\media\user\kv\page_002.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:88 - Read 316507 bytes from page_002.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:92 - UserImage instance created for generation 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:24:12 writing.views generate:97 - Saved to: E:\Projects\typen\media\user\kv\gen_0a720a9d-b649-43c6-b07f-425738b6e47b\page_002.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:98 - File URL: /media/user/kv/gen_0a720a9d-b649-43c6-b07f-425738b6e47b/page_002.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:80 - Processing page 3/3
+[INFO] 2026-03-16 00:24:12 writing.views generate:83 - Page file path: E:\Projects\typen\media\user\kv\page_003.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:88 - Read 21438 bytes from page_003.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:92 - UserImage instance created for generation 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:24:12 writing.views generate:97 - Saved to: E:\Projects\typen\media\user\kv\gen_0a720a9d-b649-43c6-b07f-425738b6e47b\page_003.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:98 - File URL: /media/user/kv/gen_0a720a9d-b649-43c6-b07f-425738b6e47b/page_003.svg
+[INFO] 2026-03-16 00:24:12 writing.views generate:102 - === GENERATE REQUEST SUCCESS - 3 files ===
+[INFO] 2026-03-16 00:24:12 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:24:12 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:24:12 writing.views generation_history:150 - Total generations found: 7
+[INFO] 2026-03-16 00:24:12 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:24:12 writing.views generation_history:161 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 00:24:12 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:24:12 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:24:12 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:24:12 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:24:12 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:24:20 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:24:20 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:24:20 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:24:20 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:24:33 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:24:33 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:24:33 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:24:33 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:25:09 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:25:09 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:25:09 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:25:09 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:27:34 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:27:34 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:27:34 writing.views generation_history:150 - Total generations found: 7
+[INFO] 2026-03-16 00:27:34 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:27:34 writing.views generation_history:161 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 00:27:34 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:27:34 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:27:34 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:27:34 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:27:34 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:27:36 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:27:36 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:27:36 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:27:36 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:27:42 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:27:42 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:27:42 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:27:42 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:27:46 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:27:46 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:27:46 writing.views generation_history:150 - Total generations found: 7
+[INFO] 2026-03-16 00:27:46 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:27:46 writing.views generation_history:161 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 00:27:46 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:27:46 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:27:46 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:27:46 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:27:46 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 00:27:46 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 00:27:46 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 00:27:47 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:27:47 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:27:47 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:27:47 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:28:39 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:28:39 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:28:39 writing.views generation_history:150 - Total generations found: 7
+[INFO] 2026-03-16 00:28:39 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:28:39 writing.views generation_history:161 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 00:28:39 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:28:39 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:28:39 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:28:39 writing.views generation_history:161 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 00:28:39 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 00:28:39 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 00:28:39 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 00:28:42 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-16 00:28:42 writing.views generate:28 - User: kv
+[INFO] 2026-03-16 00:28:42 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-16 00:28:42 writing.views generate:39 - Text length: 336
+[INFO] 2026-03-16 00:28:42 writing.views generate:48 - Output directory: E:\Projects\typen\media\user\kv
+[INFO] 2026-03-16 00:28:42 writing.views generate:50 - Starting handwriting generation...
+[INFO] 2026-03-16 00:28:44 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:28:44 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:28:44 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:28:44 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:28:54 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:28:54 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:28:54 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:28:54 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:28:59 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:28:59 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:28:59 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:28:59 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:29:18 writing.views generate:63 - Creating Generation record...
+[INFO] 2026-03-16 00:29:18 writing.views generate:76 - Generation created - ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 00:29:18 writing.views generate:80 - Processing page 1/1
+[INFO] 2026-03-16 00:29:18 writing.views generate:83 - Page file path: E:\Projects\typen\media\user\kv\page_001.svg
+[INFO] 2026-03-16 00:29:18 writing.views generate:88 - Read 122887 bytes from page_001.svg
+[INFO] 2026-03-16 00:29:18 writing.views generate:92 - UserImage instance created for generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 00:29:18 writing.views generate:97 - Saved to: E:\Projects\typen\media\user\kv\gen_2aae647c-88aa-45ce-a533-ec9f8dc3e610\page_001.svg
+[INFO] 2026-03-16 00:29:18 writing.views generate:98 - File URL: /media/user/kv/gen_2aae647c-88aa-45ce-a533-ec9f8dc3e610/page_001.svg
+[INFO] 2026-03-16 00:29:18 writing.views generate:102 - === GENERATE REQUEST SUCCESS - 1 files ===
+[INFO] 2026-03-16 00:29:18 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:29:18 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:29:18 writing.views generation_history:150 - Total generations found: 8
+[INFO] 2026-03-16 00:29:18 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:29:18 writing.views generation_history:161 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 00:29:18 writing.views generation_history:161 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 00:29:18 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:29:18 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:29:18 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:29:18 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:29:20 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 00:29:20 writing.views generation_detail:188 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 00:29:20 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:29:20 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:29:26 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:29:26 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:29:26 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:29:26 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:30:34 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 00:30:34 writing.views generation_detail:188 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 00:30:34 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:30:34 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:30:51 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 00:30:51 writing.views generation_detail:188 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 00:30:51 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:30:51 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:46:36 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:46:36 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:46:36 writing.views generation_history:150 - Total generations found: 8
+[INFO] 2026-03-16 00:46:36 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:46:36 writing.views generation_history:161 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 00:46:36 writing.views generation_history:161 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 00:46:36 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:46:36 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:46:36 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:46:36 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 00:46:37 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 00:46:37 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 00:46:42 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 00:46:42 writing.views generation_detail:188 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 00:46:42 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:46:42 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:46:55 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:46:55 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:46:55 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:46:55 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:50:21 writing.views generation_history:134 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 00:50:21 writing.views generation_history:145 - Page: 1, Per page: 5
+[INFO] 2026-03-16 00:50:21 writing.views generation_history:150 - Total generations found: 8
+[INFO] 2026-03-16 00:50:21 writing.views generation_history:156 - Paginated results: 5 items
+[INFO] 2026-03-16 00:50:21 writing.views generation_history:161 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 00:50:21 writing.views generation_history:161 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 00:50:21 writing.views generation_history:161 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 00:50:21 writing.views generation_history:161 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 00:50:21 writing.views generation_history:161 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 00:50:21 writing.views generation_history:171 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 00:50:21 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 00:50:21 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 00:50:22 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 00:50:22 writing.views generation_detail:188 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 00:50:22 writing.views generation_detail:194 - Found 1 pages for generation
+[INFO] 2026-03-16 00:50:22 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 00:50:28 writing.views generation_detail:185 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 00:50:28 writing.views generation_detail:188 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 00:50:28 writing.views generation_detail:194 - Found 3 pages for generation
+[INFO] 2026-03-16 00:50:28 writing.views generation_detail:203 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:56:06 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:56:06 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:56:06 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:56:06 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:56:06 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:56:06 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:56:06 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:56:06 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:56:06 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:56:06 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:56:09 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:56:09 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:56:09 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:56:09 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:56:09 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:56:09 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:56:09 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:56:09 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:56:09 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:56:09 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 09:56:10 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 09:56:10 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 09:56:24 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 09:56:24 writing.views generation_detail:196 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 09:56:24 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 09:56:24 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:56:28 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:56:28 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:56:28 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:56:28 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:56:28 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:56:28 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:56:28 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:56:28 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:56:28 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:56:28 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 09:56:29 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 09:56:29 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 09:56:30 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:56:30 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:56:30 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:56:30 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:56:30 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:56:30 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:56:30 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:56:30 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:56:30 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:56:30 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 09:56:30 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 09:56:30 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 09:56:32 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:56:32 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:56:32 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:56:32 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:56:32 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:56:32 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:56:32 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:56:32 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:56:32 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:56:32 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 09:56:32 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 09:56:32 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 09:56:37 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 09:56:37 writing.views generation_detail:196 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 09:56:37 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 09:56:37 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:57:12 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 09:57:13 writing.views generation_detail:196 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 09:57:13 writing.views generation_detail:202 - Found 3 pages for generation
+[INFO] 2026-03-16 09:57:13 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:57:16 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:57:16 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:57:16 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:57:16 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:57:16 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:57:16 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:57:16 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:57:16 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:57:16 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:57:16 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 09:57:17 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 09:57:17 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 09:57:18 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 09:57:18 writing.views generation_detail:196 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 09:57:18 writing.views generation_detail:202 - Found 3 pages for generation
+[INFO] 2026-03-16 09:57:18 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:57:21 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:57:21 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:57:21 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:57:21 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:57:21 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:57:21 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:57:21 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:57:21 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:57:21 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:57:21 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 09:57:21 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 09:57:21 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 09:57:22 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 09:57:22 writing.views generation_detail:196 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 09:57:22 writing.views generation_detail:202 - Found 3 pages for generation
+[INFO] 2026-03-16 09:57:22 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:57:36 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:57:36 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:57:36 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:57:36 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:57:36 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:57:36 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:57:36 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:57:36 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:57:36 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:57:36 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:57:39 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 09:57:39 writing.views generation_detail:196 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 09:57:39 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 09:57:39 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:58:20 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:58:20 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:58:20 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:58:20 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:58:20 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:58:20 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:58:20 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:58:20 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:58:20 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:58:20 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 09:58:20 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 09:58:20 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 09:58:22 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 09:58:22 writing.views generation_detail:196 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 09:58:22 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 09:58:22 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:58:26 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 09:58:26 writing.views generation_detail:196 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 09:58:26 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 09:58:26 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:58:29 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 09:58:29 writing.views generation_detail:196 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 09:58:29 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 09:58:30 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:58:31 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 2aae647c-88aa-45ce-a533-ec9f8dc3e610, User: kv ===
+[INFO] 2026-03-16 09:58:31 writing.views generation_detail:196 - Generation found: 2aae647c-88aa-45ce-a533-ec9f8dc3e610
+[INFO] 2026-03-16 09:58:31 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 09:58:31 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:58:33 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:58:33 writing.views generation_history:153 - Page: 2, Per page: 5
+[INFO] 2026-03-16 09:58:33 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:58:33 writing.views generation_history:164 - Paginated results: 3 items
+[INFO] 2026-03-16 09:58:33 writing.views generation_history:169 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 09:58:33 writing.views generation_history:169 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 09:58:33 writing.views generation_history:169 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-16 09:58:33 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:58:35 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:58:35 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:58:35 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:58:35 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:58:35 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:58:35 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:58:35 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:58:35 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:58:35 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:58:35 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:58:39 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:58:39 writing.views generation_history:153 - Page: 2, Per page: 5
+[INFO] 2026-03-16 09:58:39 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:58:39 writing.views generation_history:164 - Paginated results: 3 items
+[INFO] 2026-03-16 09:58:39 writing.views generation_history:169 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 09:58:39 writing.views generation_history:169 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 09:58:39 writing.views generation_history:169 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-16 09:58:39 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:58:41 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:58:41 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:58:41 writing.views generation_history:158 - Total generations found: 8
+[INFO] 2026-03-16 09:58:41 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:58:41 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:58:41 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:58:41 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:58:41 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:58:41 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 09:58:41 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 09:59:22 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-16 09:59:22 writing.views generate:28 - User: kv
+[INFO] 2026-03-16 09:59:23 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-16 09:59:23 writing.views generate:39 - Text length: 336
+[INFO] 2026-03-16 09:59:23 writing.views generate:48 - Creating Generation record...
+[INFO] 2026-03-16 09:59:23 writing.views generate:61 - Generation created - ID: f8f9d74b-37c0-40d2-95da-0cc02938f316
+[INFO] 2026-03-16 09:59:23 writing.views generate:66 - Session output directory: E:\Projects\typen\media\user\kv\gen_f8f9d74b-37c0-40d2-95da-0cc02938f316
+[INFO] 2026-03-16 09:59:23 writing.views generate:68 - Starting handwriting generation...
+[INFO] 2026-03-16 09:59:55 writing.views generate:84 - Generation updated with 1 pages
+[INFO] 2026-03-16 09:59:55 writing.views generate:88 - Processing page 1/1
+[INFO] 2026-03-16 09:59:55 writing.views generate:91 - Page file path: E:\Projects\typen\media\user\kv\gen_f8f9d74b-37c0-40d2-95da-0cc02938f316\page_001.svg
+[INFO] 2026-03-16 09:59:55 writing.views generate:96 - Read 124967 bytes from page_001.svg
+[INFO] 2026-03-16 09:59:55 writing.views generate:100 - UserImage instance created for generation f8f9d74b-37c0-40d2-95da-0cc02938f316
+[INFO] 2026-03-16 09:59:55 writing.views generate:105 - Saved to: E:\Projects\typen\media\user\kv\gen_f8f9d74b-37c0-40d2-95da-0cc02938f316\page_001_DA4PCAw.svg
+[INFO] 2026-03-16 09:59:55 writing.views generate:106 - File URL: /media/user/kv/gen_f8f9d74b-37c0-40d2-95da-0cc02938f316/page_001_DA4PCAw.svg
+[INFO] 2026-03-16 09:59:55 writing.views generate:110 - === GENERATE REQUEST SUCCESS - 1 files ===
+[INFO] 2026-03-16 09:59:55 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 09:59:55 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 09:59:55 writing.views generation_history:158 - Total generations found: 9
+[INFO] 2026-03-16 09:59:55 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 09:59:55 writing.views generation_history:169 - Generation f8f9d74b-37c0-40d2-95da-0cc02938f316: 1 pages
+[INFO] 2026-03-16 09:59:55 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 09:59:55 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 09:59:55 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 09:59:55 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 09:59:55 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:00:03 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: f8f9d74b-37c0-40d2-95da-0cc02938f316, User: kv ===
+[INFO] 2026-03-16 10:00:03 writing.views generation_detail:196 - Generation found: f8f9d74b-37c0-40d2-95da-0cc02938f316
+[INFO] 2026-03-16 10:00:03 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 10:00:03 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:02:42 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:02:42 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 10:02:42 writing.views generation_history:158 - Total generations found: 9
+[INFO] 2026-03-16 10:02:42 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:02:42 writing.views generation_history:169 - Generation f8f9d74b-37c0-40d2-95da-0cc02938f316: 1 pages
+[INFO] 2026-03-16 10:02:42 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 10:02:42 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 10:02:42 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 10:02:42 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 10:02:42 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 10:02:42 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-16 10:02:42 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-16 10:02:45 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 10:02:45 writing.views generation_detail:196 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 10:02:45 writing.views generation_detail:202 - Found 3 pages for generation
+[INFO] 2026-03-16 10:02:45 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:03:15 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:03:15 writing.views generation_history:153 - Page: 2, Per page: 5
+[INFO] 2026-03-16 10:03:15 writing.views generation_history:158 - Total generations found: 9
+[INFO] 2026-03-16 10:03:15 writing.views generation_history:164 - Paginated results: 4 items
+[INFO] 2026-03-16 10:03:15 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 10:03:15 writing.views generation_history:169 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 10:03:15 writing.views generation_history:169 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 10:03:15 writing.views generation_history:169 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-16 10:03:15 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:03:16 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:03:16 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 10:03:16 writing.views generation_history:158 - Total generations found: 9
+[INFO] 2026-03-16 10:03:16 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:03:16 writing.views generation_history:169 - Generation f8f9d74b-37c0-40d2-95da-0cc02938f316: 1 pages
+[INFO] 2026-03-16 10:03:16 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 10:03:16 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 10:03:16 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 10:03:16 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 10:03:16 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:04:00 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 0a720a9d-b649-43c6-b07f-425738b6e47b, User: kv ===
+[INFO] 2026-03-16 10:04:00 writing.views generation_detail:196 - Generation found: 0a720a9d-b649-43c6-b07f-425738b6e47b
+[INFO] 2026-03-16 10:04:00 writing.views generation_detail:202 - Found 3 pages for generation
+[INFO] 2026-03-16 10:04:00 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:07:49 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: f8f9d74b-37c0-40d2-95da-0cc02938f316, User: kv ===
+[INFO] 2026-03-16 10:07:49 writing.views generation_detail:196 - Generation found: f8f9d74b-37c0-40d2-95da-0cc02938f316
+[INFO] 2026-03-16 10:07:49 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 10:07:49 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:08:06 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-16 10:08:06 writing.views generate:28 - User: kv
+[INFO] 2026-03-16 10:08:07 writing.views generate:38 - Parameters - Style: 0, Bias: 0.53, Stroke: 1.75, Margins: False
+[INFO] 2026-03-16 10:08:07 writing.views generate:39 - Text length: 52
+[INFO] 2026-03-16 10:08:07 writing.views generate:48 - Creating Generation record...
+[INFO] 2026-03-16 10:08:07 writing.views generate:61 - Generation created - ID: a53d9b0b-82db-4e2a-9a96-54ae70b2be4e
+[INFO] 2026-03-16 10:08:07 writing.views generate:66 - Session output directory: E:\Projects\typen\media\user\kv\gen_a53d9b0b-82db-4e2a-9a96-54ae70b2be4e
+[INFO] 2026-03-16 10:08:07 writing.views generate:68 - Starting handwriting generation...
+[INFO] 2026-03-16 10:08:18 writing.views generate:84 - Generation updated with 1 pages
+[INFO] 2026-03-16 10:08:18 writing.views generate:88 - Processing page 1/1
+[INFO] 2026-03-16 10:08:18 writing.views generate:91 - Page file path: E:\Projects\typen\media\user\kv\gen_a53d9b0b-82db-4e2a-9a96-54ae70b2be4e\page_001.svg
+[INFO] 2026-03-16 10:08:18 writing.views generate:96 - Read 20414 bytes from page_001.svg
+[INFO] 2026-03-16 10:08:18 writing.views generate:100 - UserImage instance created for generation a53d9b0b-82db-4e2a-9a96-54ae70b2be4e
+[INFO] 2026-03-16 10:08:18 writing.views generate:105 - Saved to: E:\Projects\typen\media\user\kv\gen_a53d9b0b-82db-4e2a-9a96-54ae70b2be4e\page_001_ZSHQAU2.svg
+[INFO] 2026-03-16 10:08:18 writing.views generate:106 - File URL: /media/user/kv/gen_a53d9b0b-82db-4e2a-9a96-54ae70b2be4e/page_001_ZSHQAU2.svg
+[INFO] 2026-03-16 10:08:18 writing.views generate:110 - === GENERATE REQUEST SUCCESS - 1 files ===
+[INFO] 2026-03-16 10:08:18 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:08:18 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 10:08:18 writing.views generation_history:158 - Total generations found: 10
+[INFO] 2026-03-16 10:08:18 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:08:18 writing.views generation_history:169 - Generation a53d9b0b-82db-4e2a-9a96-54ae70b2be4e: 1 pages
+[INFO] 2026-03-16 10:08:18 writing.views generation_history:169 - Generation f8f9d74b-37c0-40d2-95da-0cc02938f316: 1 pages
+[INFO] 2026-03-16 10:08:18 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 10:08:18 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 10:08:18 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 10:08:18 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:08:23 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:08:23 writing.views generation_history:153 - Page: 2, Per page: 5
+[INFO] 2026-03-16 10:08:23 writing.views generation_history:158 - Total generations found: 10
+[INFO] 2026-03-16 10:08:23 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:08:23 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 10:08:23 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 10:08:23 writing.views generation_history:169 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 10:08:23 writing.views generation_history:169 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 10:08:23 writing.views generation_history:169 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-16 10:08:23 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:08:24 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:08:24 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 10:08:24 writing.views generation_history:158 - Total generations found: 10
+[INFO] 2026-03-16 10:08:24 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:08:24 writing.views generation_history:169 - Generation a53d9b0b-82db-4e2a-9a96-54ae70b2be4e: 1 pages
+[INFO] 2026-03-16 10:08:24 writing.views generation_history:169 - Generation f8f9d74b-37c0-40d2-95da-0cc02938f316: 1 pages
+[INFO] 2026-03-16 10:08:24 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 10:08:24 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 10:08:24 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 10:08:24 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:08:27 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-16 10:08:27 writing.views generate:28 - User: kv
+[INFO] 2026-03-16 10:08:27 writing.views generate:38 - Parameters - Style: 0, Bias: 0.53, Stroke: 1.75, Margins: False
+[INFO] 2026-03-16 10:08:27 writing.views generate:39 - Text length: 52
+[INFO] 2026-03-16 10:08:27 writing.views generate:48 - Creating Generation record...
+[INFO] 2026-03-16 10:08:27 writing.views generate:61 - Generation created - ID: 95d99905-d8ed-44ff-a53c-34133a9645fa
+[INFO] 2026-03-16 10:08:27 writing.views generate:66 - Session output directory: E:\Projects\typen\media\user\kv\gen_95d99905-d8ed-44ff-a53c-34133a9645fa
+[INFO] 2026-03-16 10:08:27 writing.views generate:68 - Starting handwriting generation...
+[INFO] 2026-03-16 10:08:42 writing.views generate:84 - Generation updated with 1 pages
+[INFO] 2026-03-16 10:08:42 writing.views generate:88 - Processing page 1/1
+[INFO] 2026-03-16 10:08:42 writing.views generate:91 - Page file path: E:\Projects\typen\media\user\kv\gen_95d99905-d8ed-44ff-a53c-34133a9645fa\page_001.svg
+[INFO] 2026-03-16 10:08:42 writing.views generate:96 - Read 21289 bytes from page_001.svg
+[INFO] 2026-03-16 10:08:42 writing.views generate:100 - UserImage instance created for generation 95d99905-d8ed-44ff-a53c-34133a9645fa
+[INFO] 2026-03-16 10:08:43 writing.views generate:105 - Saved to: E:\Projects\typen\media\user\kv\gen_95d99905-d8ed-44ff-a53c-34133a9645fa\page_001_vRtoRkL.svg
+[INFO] 2026-03-16 10:08:43 writing.views generate:106 - File URL: /media/user/kv/gen_95d99905-d8ed-44ff-a53c-34133a9645fa/page_001_vRtoRkL.svg
+[INFO] 2026-03-16 10:08:43 writing.views generate:110 - === GENERATE REQUEST SUCCESS - 1 files ===
+[INFO] 2026-03-16 10:08:43 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:08:43 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 10:08:43 writing.views generation_history:158 - Total generations found: 11
+[INFO] 2026-03-16 10:08:43 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:08:43 writing.views generation_history:169 - Generation 95d99905-d8ed-44ff-a53c-34133a9645fa: 1 pages
+[INFO] 2026-03-16 10:08:43 writing.views generation_history:169 - Generation a53d9b0b-82db-4e2a-9a96-54ae70b2be4e: 1 pages
+[INFO] 2026-03-16 10:08:43 writing.views generation_history:169 - Generation f8f9d74b-37c0-40d2-95da-0cc02938f316: 1 pages
+[INFO] 2026-03-16 10:08:43 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 10:08:43 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 10:08:43 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:08:54 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:08:54 writing.views generation_history:153 - Page: 2, Per page: 5
+[INFO] 2026-03-16 10:08:54 writing.views generation_history:158 - Total generations found: 11
+[INFO] 2026-03-16 10:08:54 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:08:54 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 10:08:54 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 10:08:54 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 10:08:54 writing.views generation_history:169 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 10:08:54 writing.views generation_history:169 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 10:08:54 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:08:55 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:08:55 writing.views generation_history:153 - Page: 3, Per page: 5
+[INFO] 2026-03-16 10:08:55 writing.views generation_history:158 - Total generations found: 11
+[INFO] 2026-03-16 10:08:55 writing.views generation_history:164 - Paginated results: 1 items
+[INFO] 2026-03-16 10:08:55 writing.views generation_history:169 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-16 10:08:55 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:08:58 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00, User: kv ===
+[INFO] 2026-03-16 10:08:58 writing.views generation_detail:196 - Generation found: 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00
+[INFO] 2026-03-16 10:08:58 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 10:08:58 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[WARNING] 2026-03-16 10:08:58 django.request log_response:230 - Not Found: /media/user/kv/gen_6bf9b86a-89db-4cee-a9ca-cd29e6f35c00/page_001.svg
+[WARNING] 2026-03-16 10:08:58 django.server log_message:161 - "GET /media/user/kv/gen_6bf9b86a-89db-4cee-a9ca-cd29e6f35c00/page_001.svg HTTP/1.1" 404 3485
+[INFO] 2026-03-16 10:09:01 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:09:01 writing.views generation_history:153 - Page: 2, Per page: 5
+[INFO] 2026-03-16 10:09:01 writing.views generation_history:158 - Total generations found: 11
+[INFO] 2026-03-16 10:09:01 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:09:01 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 10:09:01 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 10:09:01 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 10:09:01 writing.views generation_history:169 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 10:09:01 writing.views generation_history:169 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 10:09:01 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:09:03 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:09:03 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 10:09:03 writing.views generation_history:158 - Total generations found: 11
+[INFO] 2026-03-16 10:09:03 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:09:03 writing.views generation_history:169 - Generation 95d99905-d8ed-44ff-a53c-34133a9645fa: 1 pages
+[INFO] 2026-03-16 10:09:03 writing.views generation_history:169 - Generation a53d9b0b-82db-4e2a-9a96-54ae70b2be4e: 1 pages
+[INFO] 2026-03-16 10:09:03 writing.views generation_history:169 - Generation f8f9d74b-37c0-40d2-95da-0cc02938f316: 1 pages
+[INFO] 2026-03-16 10:09:03 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 10:09:03 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 10:09:03 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:09:05 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: 95d99905-d8ed-44ff-a53c-34133a9645fa, User: kv ===
+[INFO] 2026-03-16 10:09:05 writing.views generation_detail:196 - Generation found: 95d99905-d8ed-44ff-a53c-34133a9645fa
+[INFO] 2026-03-16 10:09:05 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-16 10:09:05 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:19:06 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:19:06 writing.views generation_history:153 - Page: 2, Per page: 5
+[INFO] 2026-03-16 10:19:06 writing.views generation_history:158 - Total generations found: 11
+[INFO] 2026-03-16 10:19:06 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:19:06 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 10:19:06 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 10:19:06 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 10:19:06 writing.views generation_history:169 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 10:19:06 writing.views generation_history:169 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 10:19:06 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:19:07 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:19:07 writing.views generation_history:153 - Page: 3, Per page: 5
+[INFO] 2026-03-16 10:19:07 writing.views generation_history:158 - Total generations found: 11
+[INFO] 2026-03-16 10:19:07 writing.views generation_history:164 - Paginated results: 1 items
+[INFO] 2026-03-16 10:19:07 writing.views generation_history:169 - Generation 6bf9b86a-89db-4cee-a9ca-cd29e6f35c00: 1 pages
+[INFO] 2026-03-16 10:19:07 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-16 10:19:10 django.request log_response:230 - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[WARNING] 2026-03-16 10:19:10 django.server log_message:161 - "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3193
+[INFO] 2026-03-16 10:19:12 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:19:12 writing.views generation_history:153 - Page: 2, Per page: 5
+[INFO] 2026-03-16 10:19:12 writing.views generation_history:158 - Total generations found: 11
+[INFO] 2026-03-16 10:19:12 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:19:12 writing.views generation_history:169 - Generation 874ec03e-f17c-41c3-85b6-055dd580eeef: 1 pages
+[INFO] 2026-03-16 10:19:12 writing.views generation_history:169 - Generation d57141bf-a97a-48e4-9801-09f52d47e4c5: 1 pages
+[INFO] 2026-03-16 10:19:12 writing.views generation_history:169 - Generation 33ae12d0-ce21-47a2-9a32-4999004f6f6d: 1 pages
+[INFO] 2026-03-16 10:19:12 writing.views generation_history:169 - Generation 1999d1e7-a8a6-4a22-84d8-cc181d4b00f8: 1 pages
+[INFO] 2026-03-16 10:19:12 writing.views generation_history:169 - Generation a04f0492-4151-495e-90bb-ffc9401f9f13: 1 pages
+[INFO] 2026-03-16 10:19:12 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-16 10:19:15 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-16 10:19:16 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-16 10:19:16 writing.views generation_history:158 - Total generations found: 11
+[INFO] 2026-03-16 10:19:16 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-16 10:19:16 writing.views generation_history:169 - Generation 95d99905-d8ed-44ff-a53c-34133a9645fa: 1 pages
+[INFO] 2026-03-16 10:19:16 writing.views generation_history:169 - Generation a53d9b0b-82db-4e2a-9a96-54ae70b2be4e: 1 pages
+[INFO] 2026-03-16 10:19:16 writing.views generation_history:169 - Generation f8f9d74b-37c0-40d2-95da-0cc02938f316: 1 pages
+[INFO] 2026-03-16 10:19:16 writing.views generation_history:169 - Generation 2aae647c-88aa-45ce-a533-ec9f8dc3e610: 1 pages
+[INFO] 2026-03-16 10:19:16 writing.views generation_history:169 - Generation 0a720a9d-b649-43c6-b07f-425738b6e47b: 3 pages
+[INFO] 2026-03-16 10:19:16 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-17 00:20:50 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-17 00:20:50 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-17 00:20:50 writing.views generation_history:158 - Total generations found: 15
+[INFO] 2026-03-17 00:20:50 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-17 00:20:50 writing.views generation_history:169 - Generation 834c0074-7a32-4d03-a7fc-8148e70c0ab2: 1 pages
+[INFO] 2026-03-17 00:20:50 writing.views generation_history:169 - Generation cfb612a6-c168-4584-9c3e-3c76f5f4ae58: 1 pages
+[INFO] 2026-03-17 00:20:50 writing.views generation_history:169 - Generation 557ac193-4a2c-4d98-9bca-f28dce7eedc3: 1 pages
+[INFO] 2026-03-17 00:20:50 writing.views generation_history:169 - Generation e5e2d107-bed2-4c8b-bd3a-5187074b8421: 1 pages
+[INFO] 2026-03-17 00:20:50 writing.views generation_history:169 - Generation 95d99905-d8ed-44ff-a53c-34133a9645fa: 1 pages
+[INFO] 2026-03-17 00:20:50 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[WARNING] 2026-03-17 00:20:51 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-17 00:20:51 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-17 00:20:53 writing.views generate:27 - === GENERATE REQUEST START ===
+[INFO] 2026-03-17 00:20:53 writing.views generate:28 - User: kv
+[INFO] 2026-03-17 00:20:53 writing.views generate:38 - Parameters - Style: 0, Bias: 2.0, Stroke: 1.75, Margins: False
+[INFO] 2026-03-17 00:20:53 writing.views generate:39 - Text length: 336
+[INFO] 2026-03-17 00:20:53 writing.views generate:48 - Creating Generation record...
+[INFO] 2026-03-17 00:20:53 writing.views generate:61 - Generation created - ID: b581961c-e9bb-4fd5-8d26-ab56cfd73f09
+[INFO] 2026-03-17 00:20:53 writing.views generate:66 - Session output directory: E:\Projects\typen\media\user\kv\gen_b581961c-e9bb-4fd5-8d26-ab56cfd73f09
+[INFO] 2026-03-17 00:20:53 writing.views generate:68 - Starting handwriting generation...
+[INFO] 2026-03-17 00:21:29 writing.views generate:84 - Generation updated with 1 pages
+[INFO] 2026-03-17 00:21:29 writing.views generate:88 - Processing page 1/1
+[INFO] 2026-03-17 00:21:29 writing.views generate:91 - Page file path: E:\Projects\typen\media\user\kv\gen_b581961c-e9bb-4fd5-8d26-ab56cfd73f09\page_001.svg
+[INFO] 2026-03-17 00:21:29 writing.views generate:96 - Read 121932 bytes from page_001.svg
+[INFO] 2026-03-17 00:21:29 writing.views generate:100 - UserImage instance created for generation b581961c-e9bb-4fd5-8d26-ab56cfd73f09
+[INFO] 2026-03-17 00:21:30 writing.views generate:105 - Saved to: E:\Projects\typen\media\user\kv\gen_b581961c-e9bb-4fd5-8d26-ab56cfd73f09\page_001_Jvk3vvC.svg
+[INFO] 2026-03-17 00:21:30 writing.views generate:106 - File URL: /media/user/kv/gen_b581961c-e9bb-4fd5-8d26-ab56cfd73f09/page_001_Jvk3vvC.svg
+[INFO] 2026-03-17 00:21:30 writing.views generate:110 - === GENERATE REQUEST SUCCESS - 1 files ===
+[INFO] 2026-03-17 00:21:30 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-17 00:21:30 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-17 00:21:30 writing.views generation_history:158 - Total generations found: 16
+[INFO] 2026-03-17 00:21:30 writing.views generation_history:164 - Paginated results: 5 items
+[INFO] 2026-03-17 00:21:30 writing.views generation_history:169 - Generation b581961c-e9bb-4fd5-8d26-ab56cfd73f09: 1 pages
+[INFO] 2026-03-17 00:21:30 writing.views generation_history:169 - Generation 834c0074-7a32-4d03-a7fc-8148e70c0ab2: 1 pages
+[INFO] 2026-03-17 00:21:30 writing.views generation_history:169 - Generation cfb612a6-c168-4584-9c3e-3c76f5f4ae58: 1 pages
+[INFO] 2026-03-17 00:21:30 writing.views generation_history:169 - Generation 557ac193-4a2c-4d98-9bca-f28dce7eedc3: 1 pages
+[INFO] 2026-03-17 00:21:30 writing.views generation_history:169 - Generation e5e2d107-bed2-4c8b-bd3a-5187074b8421: 1 pages
+[INFO] 2026-03-17 00:21:30 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-17 00:21:56 writing.views generation_detail:193 - === DETAIL REQUEST - Generation ID: b581961c-e9bb-4fd5-8d26-ab56cfd73f09, User: kv ===
+[INFO] 2026-03-17 00:21:56 writing.views generation_detail:196 - Generation found: b581961c-e9bb-4fd5-8d26-ab56cfd73f09
+[INFO] 2026-03-17 00:21:56 writing.views generation_detail:202 - Found 1 pages for generation
+[INFO] 2026-03-17 00:21:56 writing.views generation_detail:211 - === DETAIL REQUEST SUCCESS ===
+[INFO] 2026-03-17 22:03:05 writing.views generation_history:142 - === HISTORY REQUEST - User: x ===
+[INFO] 2026-03-17 22:03:05 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-17 22:03:05 writing.views generation_history:158 - Total generations found: 0
+[INFO] 2026-03-17 22:03:05 writing.views generation_history:164 - Paginated results: 0 items
+[INFO] 2026-03-17 22:03:05 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[ERROR] 2026-03-17 22:05:29 django.request log_response:230 - Internal Server Error: /admin/user/customuser/2/change/
+Traceback (most recent call last):
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1586, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1099, in save_model
+    obj.save()
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in _save_table
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in <listcomp>
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 302, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 88, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 317, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "E:\Projects\typen\user\models.py", line 7, in user_avatar_path
+    return f'media/user/{instance.user.username}/profile/{filename}'
+AttributeError: 'CustomUser' object has no attribute 'user'
+[ERROR] 2026-03-17 22:05:29 django.server log_message:161 - "POST /admin/user/customuser/2/change/ HTTP/1.1" 500 160718
+[ERROR] 2026-03-17 22:07:59 django.request log_response:230 - Internal Server Error: /admin/user/customuser/1/change/
+Traceback (most recent call last):
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1586, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1099, in save_model
+    obj.save()
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in _save_table
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in <listcomp>
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 302, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 88, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 317, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "E:\Projects\typen\user\models.py", line 7, in user_avatar_path
+    return f'media/user/{instance.user.username}/profile/{filename}'
+AttributeError: 'CustomUser' object has no attribute 'user'
+[ERROR] 2026-03-17 22:07:59 django.server log_message:161 - "POST /admin/user/customuser/1/change/ HTTP/1.1" 500 161012
+[ERROR] 2026-03-17 23:18:06 django.request log_response:230 - Internal Server Error: /admin/user/customuser/2/change/
+Traceback (most recent call last):
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1586, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1099, in save_model
+    obj.save()
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in _save_table
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in <listcomp>
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 302, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 88, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 317, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "E:\Projects\typen\user\models.py", line 7, in user_avatar_path
+    return f'user/{instance.user.username}/profile/{filename}'
+AttributeError: 'CustomUser' object has no attribute 'user'
+[ERROR] 2026-03-17 23:18:06 django.server log_message:161 - "POST /admin/user/customuser/2/change/ HTTP/1.1" 500 160706
+[ERROR] 2026-03-17 23:21:34 django.request log_response:230 - Internal Server Error: /admin/user/customuser/2/change/
+Traceback (most recent call last):
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1586, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1099, in save_model
+    obj.save()
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in _save_table
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in <listcomp>
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 302, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 88, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 317, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "E:\Projects\typen\user\models.py", line 7, in user_avatar_path
+    return f'user/{instance.user.username}/profile/{filename}'
+AttributeError: 'CustomUser' object has no attribute 'user'
+[ERROR] 2026-03-17 23:21:34 django.server log_message:161 - "POST /admin/user/customuser/2/change/ HTTP/1.1" 500 160706
+[ERROR] 2026-03-17 23:21:37 django.request log_response:230 - Internal Server Error: /admin/user/customuser/2/change/
+Traceback (most recent call last):
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1586, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1099, in save_model
+    obj.save()
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in _save_table
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in <listcomp>
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 302, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 88, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 317, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "E:\Projects\typen\user\models.py", line 7, in user_avatar_path
+    return f'user/{instance.user.username}/profile/{filename}'
+AttributeError: 'CustomUser' object has no attribute 'user'
+[ERROR] 2026-03-17 23:21:37 django.server log_message:161 - "POST /admin/user/customuser/2/change/ HTTP/1.1" 500 160706
+[WARNING] 2026-03-17 23:21:44 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-17 23:21:44 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[ERROR] 2026-03-17 23:21:50 django.request log_response:230 - Internal Server Error: /admin/user/customuser/2/change/
+Traceback (most recent call last):
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1586, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\options.py", line 1099, in save_model
+    obj.save()
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in _save_table
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\base.py", line 856, in <listcomp>
+    for f in non_pks]
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 302, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 88, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\fields\files.py", line 317, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "E:\Projects\typen\user\models.py", line 7, in user_avatar_path
+    return f'user/{instance.user.username}/profile/{filename}'
+AttributeError: 'CustomUser' object has no attribute 'user'
+[ERROR] 2026-03-17 23:21:50 django.server log_message:161 - "POST /admin/user/customuser/2/change/ HTTP/1.1" 500 160719
+[WARNING] 2026-03-18 16:10:06 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-18 16:10:06 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[WARNING] 2026-03-18 16:10:09 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-18 16:10:09 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[ERROR] 2026-03-18 16:10:14 django.request log_response:230 - Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: user_customuser
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\admin\sites.py", line 414, in login
+    return LoginView.as_view(**defaults)(request)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\decorators\debug.py", line 89, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\views.py", line 63, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\generic\edit.py", line 141, in post
+    if form.is_valid():
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\forms\forms.py", line 175, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\forms\forms.py", line 170, in errors
+    self.full_clean()
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\forms\forms.py", line 373, in full_clean
+    self._clean_form()
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\forms\forms.py", line 400, in _clean_form
+    cleaned_data = self.clean()
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\forms.py", line 210, in clean
+    self.user_cache = authenticate(self.request, username=username, password=password)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\__init__.py", line 76, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\contrib\auth\base_user.py", line 45, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\query.py", line 431, in get
+    num = len(clone)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\KV\anaconda3\envs\venv36\lib\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: user_customuser
+[ERROR] 2026-03-18 16:10:14 django.server log_message:161 - "POST /admin/login/?next=/admin/user/customuser/2/change/ HTTP/1.1" 500 236106
+[WARNING] 2026-03-18 16:18:28 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-18 16:18:28 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[WARNING] 2026-03-18 16:18:29 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-18 16:18:29 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
+[INFO] 2026-03-18 16:19:09 writing.views generation_history:142 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-18 16:19:09 writing.views generation_history:153 - Page: 1, Per page: 5
+[INFO] 2026-03-18 16:19:09 writing.views generation_history:158 - Total generations found: 0
+[INFO] 2026-03-18 16:19:09 writing.views generation_history:164 - Paginated results: 0 items
+[INFO] 2026-03-18 16:19:09 writing.views generation_history:179 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-18 16:48:14 writing.views generation_history:141 - === HISTORY REQUEST - User: kv ===
+[INFO] 2026-03-18 16:48:14 writing.views generation_history:152 - Page: 1, Per page: 5
+[INFO] 2026-03-18 16:48:14 writing.views generation_history:157 - Total generations found: 0
+[INFO] 2026-03-18 16:48:14 writing.views generation_history:163 - Paginated results: 0 items
+[INFO] 2026-03-18 16:48:14 writing.views generation_history:178 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-18 16:50:44 writing.views generation_history:151 - Page: 1, Per page: 5
+[INFO] 2026-03-18 16:50:44 writing.views generation_history:156 - Total generations found: 0
+[INFO] 2026-03-18 16:50:44 writing.views generation_history:162 - Paginated results: 0 items
+[INFO] 2026-03-18 16:50:44 writing.views generation_history:177 - === HISTORY REQUEST SUCCESS ===
+[INFO] 2026-03-18 16:51:26 writing.views generation_history:150 - Page: 1, Per page: 5
+[INFO] 2026-03-18 16:51:26 writing.views generation_history:155 - Total generations found: 0
+[INFO] 2026-03-18 16:51:26 writing.views generation_history:161 - Paginated results: 0 items
+[WARNING] 2026-03-18 16:51:27 django.request log_response:230 - Not Found: /favicon.ico
+[WARNING] 2026-03-18 16:51:27 django.server log_message:161 - "GET /favicon.ico HTTP/1.1" 404 3082
