@@ -1,3 +1,0 @@
-[[07/25/2025 10:20:46 PM]] Watching for file changes with StatReloader
-[[07/25/2025 10:21:00 PM]] Internal Server Error: /generate/
-[[07/25/2025 10:21:43 PM]] E:\Projects\handwriting\writing\model\generator.py changed, reloading.

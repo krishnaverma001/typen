@@ -1,3 +1,0 @@
-[[07/23/2025 08:01:01 PM]] Not Found: /media/user/kv/page_001_g39SFc2.svg
-[[07/23/2025 08:01:14 PM]] Not Found: /media/user/kv/page_001_g39SFc2.svg
-[[07/23/2025 08:10:50 PM]] E:\Projects\handwriting\writing\views.py changed, reloading.
