@@ -5,3 +5,6 @@ db.sqlite3
 /media/user/
 staticfiles/
 .idea
+.vscode/
+/writing/ml/logs/
+migrations/
