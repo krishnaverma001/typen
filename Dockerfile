@@ -26,7 +26,9 @@ RUN pip install -r requirements.txt
 COPY . /app/
 
 # Expose Django dev server port
-EXPOSE 8000
+# EXPOSE 8000
+EXPOSE 7680
 
 # Start Django server
-CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:$PORT"]
+# CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:$PORT"]
+CMD ["sh", "-c", "python manage.py migrate && gunicorn config.wsgi:application --bind 0.0.0.0:${PORT:-7860}"]
