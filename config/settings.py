@@ -30,7 +30,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'typen.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'typen.onrender.com', 'krishnaverma01-typen.hf.space']
 
 
 # Application definition
