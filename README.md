@@ -1,8 +1,16 @@
+---
+title: Typen
+emoji: ✍️
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
 # Typen - Handwriting Generation Platform
 
-Transform text into beautifully handwritten documents using transformers. 
-
+Transform text into beautifully handwritten documents using transformers.
 
 ## Demo
 
-![alt text](demo.png)
+![Demo](demo.png)
