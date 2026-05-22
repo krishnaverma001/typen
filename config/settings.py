@@ -34,7 +34,7 @@ ALLOWED_HOSTS = [
     'localhost', 
     '127.0.0.1', 
     'typen.onrender.com', 
-    'krishnaverma01.hf.space'
+    'krishnaverma01-typen.hf.space'
 ]
 
 
