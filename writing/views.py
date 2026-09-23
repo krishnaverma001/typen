@@ -61,6 +61,7 @@ def generate(request):
 
         # Create session-specific directory for output
         session_output_dir = settings.IMG_DIR / user.username / f"gen_{generation.session_id}"
+        
         os.makedirs(session_output_dir, exist_ok=True)
         logger.info(f"Session output directory: {session_output_dir}")
 
@@ -79,19 +80,25 @@ def generate(request):
         # Update generation with results
         generation.pages_generated = result["pages_generated"]
         generation.generation_time = result["generation_time"]
+
         generation.save()
-        logger.info(f"Generation updated with {result['pages_generated']} pages")
+
+        n = result['pages_generated']
+        logger.info(f"Generation updated with {n} pages")
 
         filepaths = []
-        for i in range(result["pages_generated"]):
-            logger.info(f"Processing page {i + 1}/{result['pages_generated']}")
+        for i in range(n):
+            logger.info(f"Processing page {i + 1}/{n}")
+            
             filename = f"page_{i + 1:03d}.svg"
             image_path = session_output_dir / filename
+
             logger.info(f"Page file path: {image_path}")
 
             # Read file from disk (already in session directory)
             with open(image_path, 'rb') as f:
                 data = f.read()
+
             logger.info(f"Read {len(data)} bytes from {filename}")
 
             # Create the DB object with Generation link
@@ -101,6 +108,7 @@ def generate(request):
             # Save the file using ContentFile (forces exact filename)
             # The upload_to function will place it in gen_{session_id}/ directory
             image.image.save(filename, ContentFile(data), save=True)
+            
             logger.info(f"Saved to: {image.image.path}")
             logger.info(f"File URL: {image.image.url}")
             
