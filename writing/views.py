@@ -3,6 +3,7 @@
 import os
 import io
 import zipfile
+import tempfile
 import logging
 from django.conf import settings
 
@@ -33,7 +34,7 @@ def generate(request):
         bias = float(request.POST.get("bias"))
         stroke_width = float(request.POST.get("stroke_width"))
         use_margins = request.POST.get("use_margins", "false").lower() == "true"
-        
+
         logger.info(f"Parameters - Style: {style}, Bias: {bias}, Stroke: {stroke_width}, Margins: {use_margins}")
         logger.info(f"Text length: {len(text) if text else 0}")
 
@@ -42,9 +43,8 @@ def generate(request):
             return JsonResponse({"error": "No text provided."}, status=400)
 
         user = request.user
-        
+
         # Create Generation record first to get session_id
-        logger.info("Creating Generation record...")
         generation = Generation.objects.create(
             user=user,
             text_input=text,
@@ -54,65 +54,47 @@ def generate(request):
                 "stroke_width": stroke_width,
                 "use_margins": use_margins,
             },
-            pages_generated=0,  # Will update after generation
+            pages_generated=0,
             generation_time=0.0,
         )
         logger.info(f"Generation created - ID: {generation.session_id}")
 
-        # Create session-specific directory for output
-        session_output_dir = settings.IMG_DIR / user.username / f"gen_{generation.session_id}"
-        
-        os.makedirs(session_output_dir, exist_ok=True)
-        logger.info(f"Session output directory: {session_output_dir}")
-
-        logger.info("Starting handwriting generation...")
-        result = HANDWRITING_GENERATOR.generate_handwritten_pages(
-            text=text,
-            output_dir=session_output_dir,
-            font_size_factor=0.9,
-            handwriting_style=style,
-            variation_level=bias,        # Low value: more uniform; High value: more randomness
-            stroke_color='black',
-            stroke_width=stroke_width,
-            use_margins=use_margins      # Hardcoded: True = margins with border, False = minimal padding
-        )
-
-        # Update generation with results
-        generation.pages_generated = result["pages_generated"]
-        generation.generation_time = result["generation_time"]
-
-        generation.save()
-
-        n = result['pages_generated']
-        logger.info(f"Generation updated with {n} pages")
-
         filepaths = []
-        for i in range(n):
-            logger.info(f"Processing page {i + 1}/{n}")
-            
-            filename = f"page_{i + 1:03d}.svg"
-            image_path = session_output_dir / filename
 
-            logger.info(f"Page file path: {image_path}")
+        # Generate into a TEMP dir — Django owns the final storage location
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            logger.info(f"Temp output dir: {tmp_dir}")
 
-            # Read file from disk (already in session directory)
-            with open(image_path, 'rb') as f:
-                data = f.read()
+            result = HANDWRITING_GENERATOR.generate_handwritten_pages(
+                text=text,
+                output_dir=tmp_dir,
+                font_size_factor=0.9,
+                handwriting_style=style,
+                variation_level=bias,
+                stroke_color='black',
+                stroke_width=stroke_width,
+                use_margins=use_margins,
+            )
 
-            logger.info(f"Read {len(data)} bytes from {filename}")
+            generation.pages_generated = result["pages_generated"]
+            generation.generation_time = result["generation_time"]
+            generation.save()
+            logger.info(f"Generation updated with {result['pages_generated']} pages")
 
-            # Create the DB object with Generation link
-            image = UserImage(user=user, generation=generation)
-            logger.info(f"UserImage instance created for generation {generation.session_id}")
+            for tmp_path in result["output_files"]:
+                filename = os.path.basename(tmp_path)
+                logger.info(f"Processing {filename}")
 
-            # Save the file using ContentFile (forces exact filename)
-            # The upload_to function will place it in gen_{session_id}/ directory
-            image.image.save(filename, ContentFile(data), save=True)
-            
-            logger.info(f"Saved to: {image.image.path}")
-            logger.info(f"File URL: {image.image.url}")
-            
-            filepaths.append(image.image.url)
+                with open(tmp_path, 'rb') as f:
+                    data = f.read()
+
+                image = UserImage(user=user, generation=generation)
+                image.image.save(filename, ContentFile(data), save=True)
+
+                logger.info(f"Saved to: {image.image.path}")
+                logger.info(f"File URL: {image.image.url}")
+
+                filepaths.append(image.image.url)
 
         return JsonResponse({
             "status": "success",
@@ -125,10 +107,8 @@ def generate(request):
 
     except Exception as e:
         logger.error(f"GENERATE ERROR: {str(e)}", exc_info=True)
-        import traceback
-        traceback.print_exc()
         return JsonResponse({"error": str(e)}, status=500)
-
+    
 @login_required
 def home(request):
     UsageStats.increment_visitors()
