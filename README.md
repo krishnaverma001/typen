@@ -51,6 +51,9 @@ mv .env.example .env
 
 # Edit .env with your Django secret key and superuser credentials
 
+# For running locally
+python manage.py collectstatic
+
 # Run migrations
 python manage.py makemigrations
 python manage.py migrate

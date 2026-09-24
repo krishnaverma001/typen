@@ -8,3 +8,4 @@ staticfiles/
 .vscode/
 logs/
 /writing/ml/logs/
+.DS_Store
