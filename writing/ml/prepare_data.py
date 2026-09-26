@@ -8,6 +8,11 @@ import drawing
 
 
 def get_stroke_sequence(filename):
+    """
+    Read a stroke XML file and convert its points into normalized
+    pen-movement sequences for model training.
+    """
+
     tree = ElementTree.parse(filename).getroot()
     strokes = [i for i in tree if i.tag == 'StrokeSet'][0]
 
@@ -30,6 +35,11 @@ def get_stroke_sequence(filename):
 
 
 def get_ascii_sequences(filename):
+    """
+    Read an ASCII transcription file and extract the handwritten
+    text lines as encoded character sequences.
+    """
+
     sequences = open(filename, 'r').read()
     sequences = sequences.replace(r'%%%%%%%%%%%', '\n')
     sequences = [i.strip() for i in sequences.split('\n')]
@@ -40,6 +50,11 @@ def get_ascii_sequences(filename):
 
 
 def collect_data():
+    """
+    Find matching stroke files, transcriptions, and writer IDs
+    and return them as aligned lists.
+    """
+
     fnames = []
     for dirpath, dirnames, filenames in os.walk('data/raw/ascii/'):
         if dirnames:
@@ -99,10 +114,11 @@ def collect_data():
 
 
 if __name__ == '__main__':
-    print('traversing data directory...')
+    print('Traversing data directory...')
     stroke_fnames, transcriptions, writer_ids = collect_data()
 
-    print('dumping to numpy arrays...')
+    print('Dumping to numpy arrays...')
+    
     x = np.zeros([len(stroke_fnames), drawing.MAX_STROKE_LEN, 3], dtype=np.float32)
     x_len = np.zeros([len(stroke_fnames)], dtype=np.int16)
     c = np.zeros([len(stroke_fnames), drawing.MAX_CHAR_LEN], dtype=np.int8)
@@ -113,6 +129,7 @@ if __name__ == '__main__':
     for i, (stroke_fname, c_i, w_id_i) in enumerate(zip(stroke_fnames, transcriptions, writer_ids)):
         if i % 200 == 0:
             print(i, '\t', '/', len(stroke_fnames))
+        
         x_i = get_stroke_sequence(stroke_fname)
         valid_mask[i] = ~np.any(np.linalg.norm(x_i[:, :2], axis=1) > 60)
 
