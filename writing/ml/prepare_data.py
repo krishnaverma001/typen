@@ -118,11 +118,20 @@ if __name__ == '__main__':
     stroke_fnames, transcriptions, writer_ids = collect_data()
 
     print('Dumping to numpy arrays...')
-    
+
+    # x.shape = (N, 1200, 3)
     x = np.zeros([len(stroke_fnames), drawing.MAX_STROKE_LEN, 3], dtype=np.float32)
+
+    # x_len.shape = (N, )
     x_len = np.zeros([len(stroke_fnames)], dtype=np.int16)
+    
+    # c.shape = (N, 75)
     c = np.zeros([len(stroke_fnames), drawing.MAX_CHAR_LEN], dtype=np.int8)
+
+    # c_len.shape = (N, )
     c_len = np.zeros([len(stroke_fnames)], dtype=np.int8)
+    
+    # w_id.shape and valid_mask.shape = (N, )
     w_id = np.zeros([len(stroke_fnames)], dtype=np.int16)
     valid_mask = np.zeros([len(stroke_fnames)], dtype=np.bool)
 
@@ -130,8 +139,15 @@ if __name__ == '__main__':
         if i % 200 == 0:
             print(i, '\t', '/', len(stroke_fnames))
         
-        x_i = get_stroke_sequence(stroke_fname)
-        valid_mask[i] = ~np.any(np.linalg.norm(x_i[:, :2], axis=1) > 60)
+        x_i = get_stroke_sequence(stroke_fname)     # Offset 
+
+        # Reject the sample if any movement is unusually large (> 60)
+        valid_mask[i] = ~np.any(
+            np.linalg.norm(
+                x_i[:, :2], 
+                axis=1
+            ) > 60
+        )
 
         x[i, :len(x_i), :] = x_i
         x_len[i] = len(x_i)
