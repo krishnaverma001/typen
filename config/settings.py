@@ -34,6 +34,7 @@ SECRET_KEY = config("SECRET_KEY")
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = [
+    '0.0.0.0',
     'localhost', 
     '127.0.0.1', 
     'typen.onrender.com', 
@@ -206,6 +207,11 @@ LOGGING = {
     },
     'loggers': {
         'writing': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'user': {
             'handlers': ['console', 'file'],
             'level': 'INFO',
             'propagate': False,
