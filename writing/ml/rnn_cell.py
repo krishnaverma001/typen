@@ -9,7 +9,13 @@ from .tf_utils import dense_layer, shape
 
 LSTMAttentionCellState = namedtuple(
     'LSTMAttentionCellState',
-    ['h1', 'c1', 'h2', 'c2', 'h3', 'c3', 'alpha', 'beta', 'kappa', 'w', 'phi']
+    [
+        'h1', 'c1',             # LSTM hidden + cell state
+        'h2', 'c2', 
+        'h3', 'c3', 
+        'alpha', 'beta',        # Attention mechanism
+        'kappa', 'w', 'phi'     
+    ]
 )
 
 

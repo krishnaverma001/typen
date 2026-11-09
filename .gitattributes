@@ -3,4 +3,5 @@
 checkpoints/* filter=lfs diff=lfs merge=lfs -text
 writing/ml/checkpoints/* filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
+writing/ml/data/processed/x.npy filter=lfs diff=lfs merge=lfs -text
 writing/ml/data/processed/* filter=lfs diff=lfs merge=lfs -text
