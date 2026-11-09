@@ -6,6 +6,10 @@ import numpy as np
 
 import drawing
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+PROCESSED_DIR = os.path.join(DATA_DIR, 'processed')
+os.makedirs(PROCESSED_DIR, exist_ok=True)
 
 def get_stroke_sequence(filename):
     """
@@ -18,11 +22,12 @@ def get_stroke_sequence(filename):
 
     coords = []
     for stroke in strokes:
+        n = len(stroke) - 1
         for i, point in enumerate(stroke):
             coords.append([
                 int(point.attrib['x']),
                 -1*int(point.attrib['y']),
-                int(i == len(stroke) - 1)
+                int(i == n)
             ])
     coords = np.array(coords)
 
@@ -56,7 +61,10 @@ def collect_data():
     """
 
     fnames = []
-    for dirpath, dirnames, filenames in os.walk('data/raw/ascii/'):
+
+    # for dirpath, dirnames, filenames in os.walk('data/raw/ascii/'):
+
+    for dirpath, dirnames, filenames in os.walk(os.path.join(DATA_DIR, 'raw', 'ascii')):
         if dirnames:
             continue
         for filename in filenames:
@@ -66,12 +74,21 @@ def collect_data():
 
     # low quality samples (selected by collecting samples to
     # which the trained model assigned very low likelihood)
-    blacklist = set(np.load('data/blacklist.npy'))
+    
+    # blacklist = set(np.load('data/blacklist.npy'))
 
+    blacklist = set(np.load(
+        os.path.join(DATA_DIR, 'blacklist.npy'),
+        allow_pickle=True
+    ))
+    
     stroke_fnames, transcriptions, writer_ids = [], [], []
     for i, fname in enumerate(fnames):
         print(i, fname)
-        if fname == 'data/raw/ascii/z01/z01-000/z01-000z.txt':
+
+        skip_file = os.path.join(DATA_DIR, 'raw', 'ascii', 'z01', 'z01-000', 'z01-000z.txt')
+
+        if os.path.abspath(fname) == os.path.abspath(skip_file):
             continue
 
         head, tail = os.path.split(fname)
@@ -157,11 +174,14 @@ if __name__ == '__main__':
 
         w_id[i] = w_id_i
 
-    if not os.path.isdir('data/processed'):
-        os.makedirs('data/processed')
+    # np.save('data/processed/x.npy', x[valid_mask])
+    # np.save('data/processed/x_len.npy', x_len[valid_mask])
+    # np.save('data/processed/c.npy', c[valid_mask])
+    # np.save('data/processed/c_len.npy', c_len[valid_mask])
+    # np.save('data/processed/w_id.npy', w_id[valid_mask])
 
-    np.save('data/processed/x.npy', x[valid_mask])
-    np.save('data/processed/x_len.npy', x_len[valid_mask])
-    np.save('data/processed/c.npy', c[valid_mask])
-    np.save('data/processed/c_len.npy', c_len[valid_mask])
-    np.save('data/processed/w_id.npy', w_id[valid_mask])
+    np.save(os.path.join(PROCESSED_DIR, 'x.npy'), x[valid_mask])
+    np.save(os.path.join(PROCESSED_DIR, 'x_len.npy'), x_len[valid_mask])
+    np.save(os.path.join(PROCESSED_DIR, 'c.npy'), c[valid_mask])
+    np.save(os.path.join(PROCESSED_DIR, 'c_len.npy'), c[valid_mask])
+    np.save(os.path.join(PROCESSED_DIR, 'w_id.npy'), w_id[valid_mask])

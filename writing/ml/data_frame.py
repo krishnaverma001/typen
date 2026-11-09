@@ -31,28 +31,62 @@ class DataFrame(object):
         self.idx = np.arange(self.length)
 
     def shapes(self):
-        return pd.Series(dict(zip(self.columns, [mat.shape for mat in self.data])))
+        return pd.Series(
+            dict(
+                zip(
+                    self.columns, 
+                    [mat.shape for mat in self.data]
+                )
+            )
+        )
 
     def dtypes(self):
-        return pd.Series(dict(zip(self.columns, [mat.dtype for mat in self.data])))
+        return pd.Series(
+            dict(
+                zip(
+                    self.columns, 
+                    [mat.dtype for mat in self.data]
+                )
+            )
+        )
 
     def shuffle(self):
         np.random.shuffle(self.idx)
 
-    def train_test_split(self, train_size, random_state=np.random.randint(1000), stratify=None):
+    def train_test_split(
+            self, 
+            train_size, 
+            random_state=np.random.randint(1000), 
+            stratify=None
+        ):
+
         train_idx, test_idx = train_test_split(
             self.idx,
             train_size=train_size,
             random_state=random_state,
             stratify=stratify
         )
-        train_df = DataFrame(copy.copy(self.columns), [mat[train_idx] for mat in self.data])
-        test_df = DataFrame(copy.copy(self.columns), [mat[test_idx] for mat in self.data])
+
+        train_df = DataFrame(
+            copy.copy(self.columns), 
+            [mat[train_idx] for mat in self.data]
+        )
+        test_df = DataFrame(
+            copy.copy(self.columns), 
+            [mat[test_idx] for mat in self.data]
+        )
+
         return train_df, test_df
 
-    def batch_generator(self, batch_size, shuffle=True, num_epochs=10000, allow_smaller_final_batch=False):
-        epoch_num = 0
-        while epoch_num < num_epochs:
+    def batch_generator(
+            self, 
+            batch_size, 
+            shuffle=True, 
+            num_epochs=10000, 
+            allow_smaller_final_batch=False
+        ):
+
+        for _ in range(num_epochs):
             if shuffle:
                 self.shuffle()
 
@@ -64,8 +98,6 @@ class DataFrame(object):
                     columns=copy.copy(self.columns),
                     data=[mat[batch_idx].copy() for mat in self.data]
                 )
-
-            epoch_num += 1
 
     def iterrows(self):
         for i in self.idx:
